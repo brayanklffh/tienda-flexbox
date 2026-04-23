@@ -1,90 +1,337 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="estilos.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos.css" />
+
+    <!-- FUENTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
     <title>practica 1</title>
-</head>
-<body>
-    <nav class="navegacion">
-        <div class="imagen__nav" > <img class="logo" src="logo.png" alt="" id="logo"></div>
-       
-        <ul id="elementos" >
-            <li class="nav__item"><a href="pagina1.html" id="nav__ropa">Ropa</a></li>
-            <li class="nav__item"><a href="pagina2.html"id="nav__zapatos">Accesorios</a></li>
-             <li class="nav__item "><a href="pagina3.html"id="nav__accesorios">Zapatos</a></li>
-             
+  </head>
+
+  <body>
+    <header>
+      <nav class="navegacion">
+        <div class="imagen__nav">
+          <img class="logo" src="imagenes/logo.png" alt="" id="logo" />
+        </div>
+
+        <ul id="elementos">
+          <li class="nav__item"><a href="apartados/Ropa.html">Ropa</a></li>
+          <li class="nav__item">
+            <a href="apartados/Accesorios.html">Accesorios</a>
+          </li>
+          <li class="nav__item">
+            <a href="apartados/Zapatos.html">Zapatos</a>
+          </li>
         </ul>
-       <input class="buscar" id="input__nav" type="text" placeholder="Buscar...">
-    </nav>
-    
+
+        <div>
+          <div class>
+            <div>
+              <ul>
+                <li class="submenu">
+                  <img src="imagenes/cart.png" id="img-carrito" />
+                  <div id="carrito">
+                    <table id="lista-carrito" class="u-full-width">
+                      <thead>
+                        <tr>
+                          <th>Imagen</th>
+                          <th>Nombre</th>
+                          <th>Precio</th>
+                          <th>Cantidad</th>
+                          <th></th>
+                        </tr>
+                      </thead>
+                      <tbody></tbody>
+                    </table>
+
+                    <a href="#" id="vaciar-carrito" class="button u-full-width">
+                      Vaciar Carrito
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
     <main>
-            
-  <section class="intro">
-    <h1>Bienvenido a Ns Fashon</h1>
-    <p>
-      Descubre una colección única de ropa, zapatos y accesorios pensados para cada estilo.  
-      Aquí encontrarás diseños modernos, cómodos y de calidad, para que te sientas bien en 
-      cada ocasión.  
-      Explora nuestras categorías y renueva tu estilo con lo último en tendencias de moda.
-    </p>
-  </section>
-</main>
- <section class="productos">
-  <div class="producto">
-   
-    <img class="prenda1"  src="prenda1.png" alt="">
-    <h3 class="prendas">Chaqueta Oversize Negra</h3>
-    <p class="descripcion" id="Detalles"><br>Detalles:</br> Manga con volantes, cierre frontal con cremallera, capucha ajustable</p>
-    <p class="descripcion">Tallas disponibles: S, M, L, XL</p>
-     <p class="descripcion">Color: Negro</p>
-  </div>
-   <div class="producto">
-    <img class="prenda1"  src="prenda2.png" alt="">
-    <h3 class="prendas">Chaqueta Oversize Negra</h3>
-    <p class="descripcion" id="Detalles"><br>Detalles:</br> Manga con volantes, cierre frontal con cremallera, capucha ajustable</p>
-    <p class="descripcion">Tallas disponibles: S, M, L, XL</p>
-     <p class="descripcion">Color: Negro</p>
-  </div>
-    <div class="producto">
-    <img class="prenda1"  src="prenda3.png" alt="">
-    <h3 class="prendas">Chaqueta Oversize Negra</h3>
-    <p class="descripcion" id="Detalles"><br>Detalles:</br> Manga con volantes, cierre frontal con cremallera, capucha ajustable</p>
-    <p class="descripcion">Tallas disponibles: S, M, L, XL</p>
-     <p class="descripcion">Color: Negro</p>
-  </div>
-   <div class="producto">
-    <img class="prenda1"  src="prenda4.png" alt="">
-    <h3 class="prendas">Chaqueta Oversize Negra</h3>
-    <p class="descripcion" id="Detalles"><br>Detalles:</br> Manga con volantes, cierre frontal con cremallera, capucha ajustable</p>
-    <p class="descripcion">Tallas disponibles: S, M, L, XL</p>
-     <p class="descripcion">Color: Negro</p>
-  </div>
-    <div class="producto">
+      <section class="intro">
+        <h1>Bienvenido a Nr Fashon</h1>
+        <p>
+          Descubre una colección única de ropa, zapatos y accesorios pensados
+          para cada estilo. Aquí encontrarás diseños modernos, cómodos y de
+          calidad, para que te sientas bien en cada ocasión. Explora nuestras
+          categorías y renueva tu estilo con lo último en tendencias de moda.
+        </p>
+      </section>
+    </main>
+
+    <section class="productos-ropa">
+      <div class="productos">
+        <div class="producto" data-precio="80000">
+          <img class="prenda1" src="imagenes/prenda1.png" alt="" />
+          <h3 class="prendas">Chaqueta Oversize Negra</h3>
+          <p class="descripcion detalles">
+            Tallas disponibles:<br />
+            S, M, L
+          </p>
+          <p class="descripcion">Color:</p>
+          <button class="colores color-negro" data-img="imagenes/prenda1.png"></button>
+          <button
+            class="colores color-gris"
+            data-img="imagenes/prenda1Gris.png"
+          ></button>
+          <button
+            class="colores color-azul"
+            data-img="imagenes/prenda1Azul.png"
+          ></button>
+          <p class="descripcion">Precio:<br />$80.000</p>
+          <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+        </div>
+
+        <div class="producto" data-precio="100000">
+          <img class="prenda1" src="imagenes/prenda2.png" alt="" id="segundaPrenda" />
+          <h3 class="prendas">Chaqueta Oversize Negra</h3>
+          <p class="descripcion detalles">
+            Tallas disponibles:<br />
+            S, M, L
+          </p>
+          <p class="descripcion">Color:</p>
+          <button class="colores color-camel" data-img="imagenes/prenda2.png"></button>
+          <button
+            class="colores color-morado"
+            data-img="imagenes/prenda2Morado.png"
+          ></button>
+          <button
+            class="colores color-rojo"
+            data-img="imagenes/prenda2Rojo.jpg"
+          ></button>
+          <p class="descripcion">Precio:<br />$100.000</p>
+          <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+        </div>
+
+        <div class="producto" data-precio="75000">
+          <img class="prenda1" src="imagenes/prenda3.png" alt="" />
+          <h3 class="prendas">Chaqueta Oversize Negra</h3>
+          <p class="descripcion detalles">
+            Tallas disponibles:<br />
+            S, M, L
+          </p>
+          <p class="descripcion">Color:</p>
+          <button class="colores color-beige" data-img="imagenes/prenda3.png"></button>
+          <button
+            class="colores color-verde"
+            data-img="imagenes/prenda3Verde.png"
+          ></button>
+          <button class="colores negro" data-img="imagenes/prenda3Negra.png"></button>
+          <p class="descripcion">Precio:<br />$75.000</p>
+          <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+        </div>
+
+        <div class="producto" data-precio="130000">
+          <img class="prenda1" src="imagenes/prenda4.png" alt="" />
+          <h3 class="prendas">Chaqueta Oversize Negra</h3>
+
+          <p class="descripcion detalles">
+            Tallas disponibles:<br />
+            S, M, L
+          </p>
+          <p class="descripcion">Color:</p>
+          <button class="colores color-black" data-img="imagenes/prenda4.png"></button>
+          <button
+            class="colores color-lila"
+            data-img="imagenes/prenda4Lila.png"
+          ></button>
+          <button
+            class="colores color-azulgris"
+            data-img="imagenes/prenda4Darkcyan.png"
+          ></button>
+          <p class="descripcion">Precio:<br />$130.000</p>
+          <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+        </div>
+
+        <div class="producto prendas__ocultas" data-precio="120000">
+          <img class="prenda1" src="imagenes/prenda5.png" alt="" />
+          <h3 class="prendas">Chaqueta Oversize Negra</h3>
+
+          <p class="descripcion detalles">
+            Tallas disponibles:<br />
+            S, M, L
+          </p>
+          <p class="descripcion">Color:</p>
+          <button
+            class="colores color-azulclaro"
+            data-img="imagenes/prenda5.png"
+          ></button>
+          <button
+            class="colores color-amarillo"
+            data-img="imagenes/prenda5Amarillo.png"
+          ></button>
+          <button
+            class="colores color-blanco"
+            data-img="imagenes/prenda5blanco.png"
+          ></button>
+          <p class="descripcion">Precio:<br />$120.000</p>
+          <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+        </div>
+
+        <div class="producto prendas__ocultas" data-precio="50000">
+          <img class="prenda1" src="imagenes/prenda6.png" alt="" />
+          <h3 class="prendas">Chaqueta Oversize Negra</h3>
+
+          <p class="descripcion detalles">
+            Tallas disponibles:<br />
+            S, M, L
+          </p>
+          <p class="descripcion">Color:</p>
+          <button class="colores color-pink" data-img="imagenes/prenda6.png"></button>
+          <button class="colores color-red" data-img="imagenes/prenda6Roja.png"></button>
+          <button
+            class="colores color-grisoscuro"
+            data-img="imagenes/prenda6Negra.png"
+          ></button>
+          <p class="descripcion">Precio:<br />$50.000</p>
+          <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+        </div>
+
+        <div class="producto prendas__ocultas" data-precio="90000">
+          <img class="prenda1" src="imagenes/prenda7.png" alt="" />
+          <h3 class="prendas">Chaqueta Oversize Negra</h3>
+
+          <p class="descripcion detalles">
+            Tallas disponibles:<br />
+            S, M, L
+          </p>
+          <p class="descripcion">Color:</p>
+          <button class="colores color-azul" data-img="imagenes/prenda7.png"></button>
+          <button
+            class="colores color-negro"
+            data-img="imagenes/prenda7Negro.png"
+          ></button>
+          <button
+            class="colores color-azulGris"
+            data-img="imagenes/prenda7AzulGris.png"
+          ></button>
+          <p class="descripcion">Precio:<br />$90.000</p>
+          <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+        </div>
+
+        <div class="producto prendas__ocultas" data-precio="85000">
+          <img class="prenda1" src="imagenes/prenda8.png" alt="" />
+          <h3 class="prendas">Chaqueta Oversize Negra</h3>
+
+          <p class="descripcion detalles">
+            Tallas disponibles:<br />
+            S, M, L
+          </p>
+          <p class="descripcion">Color:</p>
+          <button class="colores color-cafe" data-img="imagenes/prenda8.png"></button>
+          <button
+            class="colores color-azul"
+            data-img="imagenes/prenda8Azul.png"
+          ></button>
+          <button
+            class="colores color-gris"
+            data-img="imagenes/prenda8Gris.png"
+          ></button>
+          <p class="descripcion">Precio:<br />$85.000</p>
+          <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+        </div>
+      </div>
+      <button class="ver__mas">ver más</button>
+    </section>
+
+    <section class="texto-nuevo">
+      <div class="contenedor-articulo">
+        <div class="contenedor-texto">
+          <h2 class="titulos">PORQUE COMPRAR EN</h2>
+          <p class="titulos parrafo">NR FASHON</p>
+          <p class="texto-articulo">
+            En NR Fashion creemos que la ropa no es solo una necesidad, sino una
+            forma de expresar quién eres. Por eso, cada una de nuestras prendas
+            está pensada para ofrecer estilo, comodidad y calidad en un solo
+            lugar. Nos enfocamos en tendencias actuales, pero también en diseños
+            versátiles que puedas usar en diferentes ocasiones, sin perder tu
+            esencia.<br /><br />
+            Comprar en NR Fashion significa elegir productos con buena relación
+            calidad-precio, materiales duraderos y detalles cuidadosamente
+            seleccionados. Además, buscamos que cada cliente se sienta seguro y
+            satisfecho con su compra, brindando una experiencia confiable y
+            cercana.
+          </p>
+        </div>
+
+        <div class="imgnueva-contenedor">
+          <img class="imgnueva" src="imagenes/porqueelegirnos.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <section class="galeria-prendas">
+      <div class="contenedor-galeria">
+        <div class="texto-galeria">
+          <h3 class="subtitulo-galeria">@modaNRfashon</h3>
+          <h2 class="titulo-galeria">#NRfashonLWC</h2>
+        </div>
+        <div class="imagenes-galeria">
+          <img class="img-galeria img1" src="imagenes/imggaleria1.jpg" alt="" />
+          <img class="img-galeria img2" src="imagenes/imggaleria2.jpg" alt="" />
+          <img class="img-galeria img3" src="imagenes/imggaleria3.jpg" alt="" />
+          <img class="img-galeria img4" src="imagenes/imggaleria4.jpg" alt="" />
+          <img class="img-galeria img5" src="imagenes/imggaleria5.png" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      
+        <div class="footer-contenedor">
+          <!-- Logo / Info -->
+          <div class="footer-box">
+            <h2>NR Fashion</h2>
+            <p>
+              Moda moderna y accesible para todos. Encuentra estilo, comodidad y
+              calidad en un solo lugar.
+            </p>
+          </div>
+
+          <!-- Ayuda -->
+          <div class="footer-box">
+            <h3>Ayuda</h3>
+            <a href="#">Preguntas frecuentes</a>
+            <a href="#">Envíos</a>
+            <a href="#">Devoluciones</a>
+            <a href="#">Soporte</a>
+          </div>
+
+          <!-- Redes -->
+          <div class="footer-box">
+            <h3>Síguenos</h3>
+            <p>@nrfashion</p>
+            <p>Instagram | TikTok | Facebook</p>
+          </div>
+        </div>
     
-    <img class="prenda1"  src="prenda5.png" alt="">
-    <h3 class="prendas">Chaqueta Oversize Negra</h3>
-    <p class="descripcion" id="Detalles"><br>Detalles:</br> Manga con volantes, cierre frontal con cremallera, capucha ajustable</p>
-    <p class="descripcion">Tallas disponibles: S, M, L, XL</p>
-     <p class="descripcion">Color: Negro</p>
-  </div>
-     <div class="producto">
-    
-    <img class="prenda1"  src="prenda6.png" alt="">
-    <h3 class="prendas">Chaqueta Oversize Negra</h3>
-    <p class="descripcion"id="Detalles" ><br>Detalles:</br> Manga con volantes, cierre frontal con cremallera, capucha ajustable</p>
-    <p class="descripcion">Tallas disponibles: S, M, L, XL</p>
-     <p class="descripcion">Color: Negro</p>
-  </div>
-   
- </section>
-<footer>
-  <div class="texto-footer"><p class="derechos">© 2025 Mi Sitio Web - Todos los derechos reservados</p></div>   
-  </footer>
-</body>
+      <div class="footer-copyright">
+        <p>© 2026 NR Fashion - Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <script src="interacciones.js"></script>
+  </body>
 </html>
