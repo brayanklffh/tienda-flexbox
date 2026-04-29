@@ -91,5 +91,60 @@ if (MediaMovil.matches) {
   });
 }
 
+const productosDisponibles = document.querySelector(".productos");
+const escucharClick = document.querySelector(".agregar-a-carrito");
+const añadirProducto = document.querySelector(".añadirProductosCarrito");
 
 
+//funcion para detectar el click y añadir los datos al html al hacer click
+productosDisponibles.addEventListener("click", (event) => {
+   
+  if (event.target.classList.contains("agregar-a-carrito")) {
+
+    
+    const mostrar = event.target.closest(".producto");
+    
+    const producto = {
+      id: mostrar.dataset.id,
+      imagen: mostrar.querySelector("img").src,
+      nombre: mostrar.querySelector(".prendas").textContent,
+      precio: mostrar.dataset.precio,
+      cantidad: 1,
+    };
+
+    const { imagen, nombre, precio, cantidad } = producto;
+
+    const fila = document.createElement("tr");
+
+    fila.innerHTML = `
+      <td><img src="${imagen}" width="50"></td>
+      <td>${nombre}</td>
+      <td>$${precio}</td>
+      <td class="cantidad">${cantidad}</td>
+      <td><button class="eliminar">X</button></td>
+    `;
+
+    añadirProducto.appendChild(fila);
+  }
+});
+
+//escucha el click y borra el elemento del carrito
+añadirProducto.addEventListener("click", (e) => {
+
+  if (e.target.classList.contains("eliminar")) {
+    const fila = e.target.closest("tr");
+    fila.remove();
+    console.log(fila);
+  }
+
+});
+
+
+const tbody = document.querySelector(".añadirProductosCarrito");
+const vaciarCarrito = document.querySelector("#vaciar-carrito");
+
+//borra en general todo el contenido del carrito
+vaciarCarrito.addEventListener("click", (e) => {
+  e.preventDefault();
+  tbody.innerHTML = "";
+});

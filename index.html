@@ -38,7 +38,7 @@
         </ul>
 
         <div>
-          <div class>
+          <div >
             <div>
               <ul>
                 <li class="submenu">
@@ -50,16 +50,15 @@
                           <th>Imagen</th>
                           <th>Nombre</th>
                           <th>Precio</th>
-                          <th>Cantidad</th>
+                          <th class="Cantidad">Cantidad</th>
                           <th></th>
                         </tr>
                       </thead>
-                      <tbody></tbody>
+                      <tbody class="añadirProductosCarrito"></tbody>
                     </table>
 
-                    <a href="#" id="vaciar-carrito" class="button u-full-width">
-                      Vaciar Carrito
-                    </a>
+                 
+                    <button id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</button>
                   </div>
                 </li>
               </ul>
@@ -82,8 +81,9 @@
     </main>
 
     <section class="productos-ropa">
+
       <div class="productos">
-        <div class="producto" data-precio="80000">
+        <div class="producto" data-precio="80000" data-id="1">
           <img class="prenda1" src="imagenes/prenda1.png" alt="" />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
           <p class="descripcion detalles">
@@ -104,7 +104,7 @@
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="producto" data-precio="100000">
+        <div class="producto" data-precio="100000" data-id="2" >
           <img class="prenda1" src="imagenes/prenda2.png" alt="" id="segundaPrenda" />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
           <p class="descripcion detalles">
@@ -125,7 +125,7 @@
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="producto" data-precio="75000">
+        <div class="producto" data-precio="75000" data-id="3">
           <img class="prenda1" src="imagenes/prenda3.png" alt="" />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
           <p class="descripcion detalles">
@@ -143,7 +143,7 @@
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="producto" data-precio="130000">
+        <div class="producto" data-precio="130000" data-id="4" >
           <img class="prenda1" src="imagenes/prenda4.png" alt="" />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
 
@@ -165,7 +165,7 @@
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="producto prendas__ocultas" data-precio="120000">
+        <div class="producto prendas__ocultas" data-precio="120000" data-id="5">
           <img class="prenda1" src="imagenes/prenda5.png" alt="" />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
 
@@ -190,7 +190,7 @@
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="producto prendas__ocultas" data-precio="50000">
+        <div class="producto prendas__ocultas" data-precio="50000"  data-id="6" >
           <img class="prenda1" src="imagenes/prenda6.png" alt="" />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
 
@@ -209,7 +209,7 @@
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="producto prendas__ocultas" data-precio="90000">
+        <div class="producto prendas__ocultas" data-precio="90000" data-id="7" >
           <img class="prenda1" src="imagenes/prenda7.png" alt="" />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
 
@@ -231,7 +231,7 @@
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="producto prendas__ocultas" data-precio="85000">
+        <div class="producto prendas__ocultas" data-precio="85000" data-id="8">
           <img class="prenda1" src="imagenes/prenda8.png" alt="" />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
 
