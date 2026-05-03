@@ -227,7 +227,7 @@ a:hover{
   min-width: 300px;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  z-index: 100;
+  z-index: 10;
 }
 
 
@@ -258,20 +258,23 @@ a:hover{
 
 /* BOTÓN */
 #vaciar-carrito {
-  display: block;
-  text-align: center;
   background: black;
   color: white;
-  padding: 8px;
   border-radius: 5px;
-  text-decoration: none;
+  height: 40px;
+ 
 }
-
+.contenedor-boton{
+  display: flex;
+}
 /* HOVER BOTÓN */
 #vaciar-carrito:hover {
   background: red;
+  border-style: none;
 }
-
+.total-valor{
+ margin-left: 70px;
+}
 @media (min-width: 310px) and (max-width: 425px) {
 #carrito {
   display: none;
@@ -660,6 +663,11 @@ background-color: darkcyan;
   }
 }
 
+.eliminar:hover{
+  background-color: red;
+  color: white;
+  border-style: none;
+}
 
 
 

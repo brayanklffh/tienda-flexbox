@@ -32,7 +32,7 @@ botones.forEach((boton) => {
   });
 });
 
-// configuracion del footer deslegable
+// configuracion del footer desplegable
 const infoOcultaFooter = document.querySelector(".footer-contenedor");
 const footer = document.querySelector("footer");
 
@@ -71,7 +71,6 @@ if (MediaMovil.matches) {
   });
 
   body.addEventListener("click", () => {
-    console.log("body");
     ListaCarrito.classList.remove("activo");
   });
 } else {
@@ -91,60 +90,155 @@ if (MediaMovil.matches) {
   });
 }
 
+
+//funcionamiento del carrito
+let carrito = [];
+
+let loteSeleccionado = "";
+
+
 const productosDisponibles = document.querySelector(".productos");
-const escucharClick = document.querySelector(".agregar-a-carrito");
 const añadirProducto = document.querySelector(".añadirProductosCarrito");
+const vaciarCarrito = document.querySelector("#vaciar-carrito");
+const totalHTML = document.querySelector("#total-valor");
 
 
-//funcion para detectar el click y añadir los datos al html al hacer click
+// seleccionar lote
+const duplicados = document.querySelectorAll(".colores");
+
+duplicados.forEach((color) => {
+  color.addEventListener("click", (e) => {
+    loteSeleccionado = e.target.dataset.numerodelote;
+    console.log("Lote seleccionado:", loteSeleccionado);
+  });
+});
+
+
+// funcion total
+const sumarPrendaIguales = () => {
+  const total = carrito.reduce((total, producto) => {
+    return total + Number(producto.precio) * producto.cantidad;
+  }, 0);
+
+  if (totalHTML) {
+    totalHTML.textContent = total;
+  }
+
+  console.log("Total:", total);
+};
+
+
+// agregar producto
 productosDisponibles.addEventListener("click", (event) => {
-   
   if (event.target.classList.contains("agregar-a-carrito")) {
 
-    
-    const mostrar = event.target.closest(".producto");
-    
+    if (loteSeleccionado === "") {
+      alert("Selecciona un producto primero");
+      return;
+    }
+
+    const productoExistente = carrito.find(
+      (p) => p.lote === loteSeleccionado
+    );
+
+    //si ya existe suma
+    if (productoExistente) {
+      productoExistente.cantidad++;
+
+      const fila = añadirProducto.querySelector(
+        `tr[data-lote="${loteSeleccionado}"]`
+      );
+
+      if (fila) {
+        fila.querySelector(".cantidad").textContent =
+          productoExistente.cantidad;
+
+        fila.querySelector(".precio").textContent =
+          `$${Number(productoExistente.precio) * productoExistente.cantidad}`;
+      }
+
+      sumarPrendaIguales();
+      return;
+      
+    }
+
+    // crear nuevo producto
+    const contenedor = event.target.closest(".producto");
+
     const producto = {
-      id: mostrar.dataset.id,
-      imagen: mostrar.querySelector("img").src,
-      nombre: mostrar.querySelector(".prendas").textContent,
-      precio: mostrar.dataset.precio,
+      id: contenedor.dataset.id,
+      imagen: contenedor.querySelector("img").src,
+      nombre: contenedor.querySelector(".prendas").textContent,
+      precio: contenedor.dataset.precio,
+      lote: loteSeleccionado,
       cantidad: 1,
     };
-
-    const { imagen, nombre, precio, cantidad } = producto;
+   //añade a carrito el objeto de producto
+    carrito.push(producto);
 
     const fila = document.createElement("tr");
+    fila.dataset.lote = loteSeleccionado;
 
     fila.innerHTML = `
-      <td><img src="${imagen}" width="50"></td>
-      <td>${nombre}</td>
-      <td>$${precio}</td>
-      <td class="cantidad">${cantidad}</td>
+      <td><img src="${producto.imagen}" width="50"></td>
+      <td>${producto.nombre}</td>
+      <td class="precio">$${producto.precio}</td>
+      <td class="cantidad">${producto.cantidad}</td>
       <td><button class="eliminar">X</button></td>
     `;
 
     añadirProducto.appendChild(fila);
+
+    loteSeleccionado = "";
+
+    sumarPrendaIguales();
   }
 });
 
-//escucha el click y borra el elemento del carrito
+
+// eliminar o restar producto o cantidad
 añadirProducto.addEventListener("click", (e) => {
-
   if (e.target.classList.contains("eliminar")) {
-    const fila = e.target.closest("tr");
-    fila.remove();
-    console.log(fila);
-  }
 
+    const fila = e.target.closest("tr");
+    const lote = String(fila.dataset.lote);
+
+    const producto = carrito.find((p) => p.lote === lote);
+
+    if (!producto) return;
+
+    producto.cantidad--;
+       //si la cantidad es mayor que 0 se actualiza
+    if (producto.cantidad > 0) {
+
+      fila.querySelector(".cantidad").textContent =
+        producto.cantidad;
+
+      fila.querySelector(".precio").textContent =
+        `$${Number(producto.precio) * producto.cantidad}`;
+
+    } else {
+
+      fila.remove();
+
+      carrito = carrito.filter((p) => p.lote !== lote);
+    }
+
+    sumarPrendaIguales();
+  }
 });
 
 
-const tbody = document.querySelector(".añadirProductosCarrito");
-const vaciarCarrito = document.querySelector("#vaciar-carrito");
-
-//borra en general todo el contenido del carrito
+// vacia el carrito y el array en general
 vaciarCarrito.addEventListener("click", (e) => {
   e.preventDefault();
-  tbody.innerHTML = "";
+
+  carrito = [];
+  añadirProducto.innerHTML = "";
+
+  sumarPrendaIguales();
+
+  console.log("Carrito vacío");
 });
+
+

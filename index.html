@@ -38,7 +38,7 @@
         </ul>
 
         <div>
-          <div >
+          <div>
             <div>
               <ul>
                 <li class="submenu">
@@ -56,9 +56,10 @@
                       </thead>
                       <tbody class="añadirProductosCarrito"></tbody>
                     </table>
-
-                 
-                    <button id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</button>
+                    <div class="contenedor-boton"><button id="vaciar-carrito" class="button u-full-width">
+                      Vaciar Carrito
+                    </button><p class="total-valor">Total: $<span id="total-valor">0</span></p></div>
+                    
                   </div>
                 </li>
               </ul>
@@ -81,7 +82,6 @@
     </main>
 
     <section class="productos-ropa">
-
       <div class="productos">
         <div class="producto" data-precio="80000" data-id="1">
           <img class="prenda1" src="imagenes/prenda1.png" alt="" />
@@ -91,35 +91,52 @@
             S, M, L
           </p>
           <p class="descripcion">Color:</p>
-          <button class="colores color-negro" data-img="imagenes/prenda1.png"></button>
+          <button
+            class="colores color-negro"
+            data-img="imagenes/prenda1.png"
+            data-numerodelote="A-101"
+          ></button>
           <button
             class="colores color-gris"
             data-img="imagenes/prenda1Gris.png"
+            data-numerodelote="A-102"
           ></button>
           <button
             class="colores color-azul"
             data-img="imagenes/prenda1Azul.png"
+            data-numerodelote="A-103"
           ></button>
           <p class="descripcion">Precio:<br />$80.000</p>
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="producto" data-precio="100000" data-id="2" >
-          <img class="prenda1" src="imagenes/prenda2.png" alt="" id="segundaPrenda" />
+        <div class="producto" data-precio="100000" data-id="2">
+          <img
+            class="prenda1"
+            src="imagenes/prenda2.png"
+            alt=""
+            id="segundaPrenda"
+          />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
           <p class="descripcion detalles">
             Tallas disponibles:<br />
             S, M, L
           </p>
           <p class="descripcion">Color:</p>
-          <button class="colores color-camel" data-img="imagenes/prenda2.png"></button>
+          <button
+            class="colores color-camel"
+            data-img="imagenes/prenda2.png"
+            data-numerodelote="B-101"
+          ></button>
           <button
             class="colores color-morado"
             data-img="imagenes/prenda2Morado.png"
+            data-numerodelote="B-102"
           ></button>
           <button
             class="colores color-rojo"
             data-img="imagenes/prenda2Rojo.jpg"
+            data-numerodelote="B-103"
           ></button>
           <p class="descripcion">Precio:<br />$100.000</p>
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
@@ -133,17 +150,26 @@
             S, M, L
           </p>
           <p class="descripcion">Color:</p>
-          <button class="colores color-beige" data-img="imagenes/prenda3.png"></button>
+          <button
+            class="colores color-beige"
+            data-img="imagenes/prenda3.png"
+            data-numerodelote="C-101"
+          ></button>
           <button
             class="colores color-verde"
             data-img="imagenes/prenda3Verde.png"
+            data-numerodelote="C-102"
           ></button>
-          <button class="colores negro" data-img="imagenes/prenda3Negra.png"></button>
+          <button
+            class="colores negro"
+            data-img="imagenes/prenda3Negra.png"
+            data-numero-de-lote="C-103"
+          ></button>
           <p class="descripcion">Precio:<br />$75.000</p>
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="producto" data-precio="130000" data-id="4" >
+        <div class="producto" data-precio="130000" data-id="4">
           <img class="prenda1" src="imagenes/prenda4.png" alt="" />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
 
@@ -152,14 +178,20 @@
             S, M, L
           </p>
           <p class="descripcion">Color:</p>
-          <button class="colores color-black" data-img="imagenes/prenda4.png"></button>
+          <button
+            class="colores color-black"
+            data-img="imagenes/prenda4.png"
+            data-numerodelote="D-101"
+          ></button>
           <button
             class="colores color-lila"
             data-img="imagenes/prenda4Lila.png"
+            data-numerodelote="D-102"
           ></button>
           <button
             class="colores color-azulgris"
             data-img="imagenes/prenda4Darkcyan.png"
+            data-numerodelote="D-103"
           ></button>
           <p class="descripcion">Precio:<br />$130.000</p>
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
@@ -177,20 +209,23 @@
           <button
             class="colores color-azulclaro"
             data-img="imagenes/prenda5.png"
+            data-numerodelote="E-101"
           ></button>
           <button
             class="colores color-amarillo"
             data-img="imagenes/prenda5Amarillo.png"
+            data-numerodelote="E-102"
           ></button>
           <button
             class="colores color-blanco"
             data-img="imagenes/prenda5blanco.png"
+            data-numerodelote="E-103"
           ></button>
           <p class="descripcion">Precio:<br />$120.000</p>
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="producto prendas__ocultas" data-precio="50000"  data-id="6" >
+        <div class="producto prendas__ocultas" data-precio="50000" data-id="6">
           <img class="prenda1" src="imagenes/prenda6.png" alt="" />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
 
@@ -199,17 +234,27 @@
             S, M, L
           </p>
           <p class="descripcion">Color:</p>
-          <button class="colores color-pink" data-img="imagenes/prenda6.png"></button>
-          <button class="colores color-red" data-img="imagenes/prenda6Roja.png"></button>
+          <button
+            class="colores color-pink"
+            data-img="imagenes/prenda6.png"
+            data-numerodelote="F-101"
+          ></button>
+          <button
+            class="colores color-red"
+            data-img="imagenes/prenda6Roja.png"
+            data-numerodelote="F-102"
+          
+          ></button>
           <button
             class="colores color-grisoscuro"
             data-img="imagenes/prenda6Negra.png"
+            data-numerodelote="F-103"
           ></button>
           <p class="descripcion">Precio:<br />$50.000</p>
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="producto prendas__ocultas" data-precio="90000" data-id="7" >
+        <div class="producto prendas__ocultas" data-precio="90000" data-id="7">
           <img class="prenda1" src="imagenes/prenda7.png" alt="" />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
 
@@ -218,14 +263,20 @@
             S, M, L
           </p>
           <p class="descripcion">Color:</p>
-          <button class="colores color-azul" data-img="imagenes/prenda7.png"></button>
+          <button
+            class="colores color-azul"
+            data-img="imagenes/prenda7.png"
+            data-numerodelote="G-101"
+          ></button>
           <button
             class="colores color-negro"
             data-img="imagenes/prenda7Negro.png"
+            data-numerodelote="G-102"
           ></button>
           <button
             class="colores color-azulGris"
             data-img="imagenes/prenda7AzulGris.png"
+            data-numerodelote="G-103"
           ></button>
           <p class="descripcion">Precio:<br />$90.000</p>
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
@@ -240,14 +291,20 @@
             S, M, L
           </p>
           <p class="descripcion">Color:</p>
-          <button class="colores color-cafe" data-img="imagenes/prenda8.png"></button>
+          <button
+            class="colores color-cafe"
+            data-img="imagenes/prenda8.png"
+            data-numerodelote="H-101"
+          ></button>
           <button
             class="colores color-azul"
             data-img="imagenes/prenda8Azul.png"
+            data-numerodelote="H-102"
           ></button>
           <button
             class="colores color-gris"
             data-img="imagenes/prenda8Gris.png"
+             data-numerodelote="H-103"
           ></button>
           <p class="descripcion">Precio:<br />$85.000</p>
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
@@ -299,34 +356,33 @@
     </section>
 
     <footer class="footer">
-      
-        <div class="footer-contenedor">
-          <!-- Logo / Info -->
-          <div class="footer-box">
-            <h2>NR Fashion</h2>
-            <p>
-              Moda moderna y accesible para todos. Encuentra estilo, comodidad y
-              calidad en un solo lugar.
-            </p>
-          </div>
-
-          <!-- Ayuda -->
-          <div class="footer-box">
-            <h3>Ayuda</h3>
-            <a href="#">Preguntas frecuentes</a>
-            <a href="#">Envíos</a>
-            <a href="#">Devoluciones</a>
-            <a href="#">Soporte</a>
-          </div>
-
-          <!-- Redes -->
-          <div class="footer-box">
-            <h3>Síguenos</h3>
-            <p>@nrfashion</p>
-            <p>Instagram | TikTok | Facebook</p>
-          </div>
+      <div class="footer-contenedor">
+        <!-- Logo / Info -->
+        <div class="footer-box">
+          <h2>NR Fashion</h2>
+          <p>
+            Moda moderna y accesible para todos. Encuentra estilo, comodidad y
+            calidad en un solo lugar.
+          </p>
         </div>
-    
+
+        <!-- Ayuda -->
+        <div class="footer-box">
+          <h3>Ayuda</h3>
+          <a href="#">Preguntas frecuentes</a>
+          <a href="#">Envíos</a>
+          <a href="#">Devoluciones</a>
+          <a href="#">Soporte</a>
+        </div>
+
+        <!-- Redes -->
+        <div class="footer-box">
+          <h3>Síguenos</h3>
+          <p>@nrfashion</p>
+          <p>Instagram | TikTok | Facebook</p>
+        </div>
+      </div>
+
       <div class="footer-copyright">
         <p>© 2026 NR Fashion - Todos los derechos reservados</p>
       </div>
