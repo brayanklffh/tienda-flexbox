@@ -204,7 +204,7 @@ a:hover{
 }
 
 /* CARRITO ICONO */
-#img-carrito {
+.img-carrito {
   width: 40px;
   cursor: pointer;
   margin-right: 70px;
@@ -217,7 +217,7 @@ a:hover{
 }
 
 /* CARRITO OCULTO */
-#carrito {
+.carrito {
   display: none; /*oculto por defecto */
   position: absolute;
   right: 0;
@@ -231,28 +231,28 @@ a:hover{
 }
 
 
-#carrito.activo {
+.carrito.activo {
   display: block;
 }
 
 
 
 /* TABLA */
-#lista-carrito {
+.lista-carrito {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 10px;
 }
 
-#lista-carrito th,
-#lista-carrito td {
+.lista-carrito th,
+.lista-carrito td {
   text-align: center;
   padding: 5px;
   font-size: 14px;
 }
 
 /* IMÁGENES EN TABLA */
-#lista-carrito img {
+.lista-carrito img {
   width: 50px;
 }
 
@@ -276,7 +276,7 @@ a:hover{
  margin-left: 70px;
 }
 @media (min-width: 310px) and (max-width: 425px) {
-#carrito {
+.carrito {
   display: none;
   position: absolute;
   left: 40%;
