@@ -17,6 +17,14 @@
       rel="stylesheet"
     />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="Explora nuestra colección de ropa, accesorios y calzado para hombre y mujer. Moda moderna, calidad premium y estilo para cada ocasión."
+    />
     <title>practica 1</title>
   </head>
 
@@ -42,9 +50,9 @@
             <div>
               <ul>
                 <li class="submenu">
-                  <img src="../imagenes/cart.png"  class="img-carrito" />
-                  <div  class="carrito">
-                    <table  class="lista-carrito">
+                  <img src="../imagenes/cart.png" class="img-carrito" />
+                  <div class="carrito">
+                    <table class="lista-carrito">
                       <thead>
                         <tr>
                           <th>Imagen</th>
@@ -56,10 +64,14 @@
                       </thead>
                       <tbody class="añadirProductosCarrito"></tbody>
                     </table>
-                    <div class="contenedor-boton"><button id="vaciar-carrito" class="button u-full-width">
-                      Vaciar Carrito
-                    </button><p class="total-valor">Total: $<span id="total-valor">0</span></p></div>
-                    
+                    <div class="contenedor-boton">
+                      <button id="vaciar-carrito" class="button u-full-width">
+                        Vaciar Carrito
+                      </button>
+                      <p class="total-valor">
+                        Total: $<span id="total-valor">0</span>
+                      </p>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -69,7 +81,28 @@
       </nav>
     </header>
 
+    <section class="banner-principal">
+      <div class="contenedor-banner">
+        <img
+          src="../imagenes/banner.png"
+          class="banner"
+          alt="Imagen principal"
+        />
 
+        <div class="texto-banner">
+          <h2>
+            WEAR CLOTHS FOR ALL<br />
+            THAT MATTER
+          </h2>
+          <p>
+            Discover The Perfect Jacket For Any Occasion. Crafted With The
+            Premium Materials And Attention To Detail, Versatile Piece Will
+            Elevate You Comfortable In Style.
+          </p>
+          <button class="boton-banner">Shop now</button>
+        </div>
+      </div>
+    </section>
 
     <section class="productos-ropa">
       <div class="productos">
@@ -215,7 +248,7 @@
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
 
-        <div class="producto " data-precio="50000" data-id="6">
+        <div class="producto" data-precio="50000" data-id="6">
           <img class="prenda1" src="../imagenes/prenda6.png" alt="" />
           <h3 class="prendas">Chaqueta Oversize Negra</h3>
 
@@ -233,7 +266,6 @@
             class="colores color-red"
             data-img="../imagenes/prenda6Roja.png"
             data-numerodelote="F-102"
-          
           ></button>
           <button
             class="colores color-grisoscuro"
@@ -294,15 +326,13 @@
           <button
             class="colores color-gris"
             data-img="../imagenes/prenda8Gris.png"
-             data-numerodelote="H-103"
+            data-numerodelote="H-103"
           ></button>
           <p class="descripcion">Precio:<br />$85.000</p>
           <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
         </div>
       </div>
-     
     </section>
-
 
     <footer class="footer">
       <div class="footer-contenedor">
