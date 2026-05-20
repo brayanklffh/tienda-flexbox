@@ -1,105 +1,121 @@
+/* ==========================================================================
+   1. CONFIGURACIÓN GENERAL Y ESTILOS BASE
+   ========================================================================== */
 
-*{
+* {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
 }
 
-/*  NAV */
+/* CONTENEDOR GENERAL */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-.navegacion{
+/* ==========================================================================
+   2. NAVBAR / NAVEGACIÓN
+   ========================================================================== */
+
+.navegacion {
   display: flex;
   justify-content: space-between;
   background-color: black;
 }
 
-@media (max-width:690px){
-  .navegacion{
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-items: center;
-    gap: 2px;
-  }
-
-  #elementos{
-    display: flex;
-    gap: 15px;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .logo{
-    min-width: 100px;
-  }
-
-  #input__nav{
-    width: 80%;
-    margin: 0 0 15px 0;
-  }
-}
-
-#elementos{
+#elementos {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 20px;
 }
 
-@media (max-width: 370px) {
-  #elementos{
-    margin-right: 40px;
-    gap: 25px;
-  }
-
-  #input__nav{
-    margin-right: 30px;
-    margin-left: 20px;
-  }
-}
-
-.nav__item a{
+.nav__item a {
   color: white;
   font-size: 20px;
   text-decoration: none;
-  transition: color 0.3s, text-shadow 0.3s;
-  font-family: 'Poppins', sans-serif;
+  transition:
+    color 0.3s,
+    text-shadow 0.3s;
+  font-family: "Poppins", sans-serif;
 }
 
-a:hover{
+a:hover {
   color: rgb(0, 149, 255);
   text-shadow: whitesmoke 0px 0px 10px;
 }
 
-/* INPUT  */
-
-#input__nav{
+/* INPUT NAV */
+#input__nav {
   max-width: 100%;
   height: 25px;
   border-radius: 10px;
   margin: 28px 20px 25px 0;
 }
 
-/* LOGO  */
-
-.imagen__nav{
+/* LOGO */
+.imagen__nav {
   margin-left: 20px;
   width: 100px;
 }
 
-.logo{
+.logo {
   max-width: 5rem;
 }
 
+/* ==========================================================================
+   3. RESPONSIVE NAVEGACIÓN (MEDIA QUERIES)
+   ========================================================================== */
+
+@media (max-width: 690px) {
+  .navegacion {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  #elementos {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .logo {
+    min-width: 100px;
+  }
+
+  #input__nav {
+    width: 80%;
+    margin: 0 0 15px 0;
+  }
+}
+
 @media (max-width: 370px) {
-  .imagen__nav{
+  #elementos {
+    margin-right: 40px;
+    gap: 25px;
+  }
+
+  #input__nav {
+    margin-right: 30px;
+    margin-left: 20px;
+  }
+
+  .imagen__nav {
     margin-right: 45px;
   }
 }
 
-/* INTRO */
+/* ==========================================================================
+   4. SECCIÓN INTRO
+   ========================================================================== */
 
 .intro {
   text-align: center;
@@ -110,52 +126,169 @@ a:hover{
 
 @media (min-width: 780px) {
   .intro {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family:
+      "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
     width: 60%;
     font-size: 20px;
   }
 }
 
-/* PRODUCTOS  */
+/* ==========================================================================
+   5. BANNER PRINCIPAL
+   ========================================================================== */
 
-.producto{
-  max-width: 300px;
-  border-radius: 20px;
-  margin: 20px;
+.contenedor-banner {
+  width: 100%;
+  height: 650px;
+  position: relative;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.texto-banner {
+  position: absolute;
+  top: 50%;
+  left: 4%;
+  transform: translateY(-60%);
+  z-index: 2;
+  color: black;
+  width: 50%;
   padding: 20px;
-  background-color: white;
-  transition: transform 0.3s, box-shadow 0.3s;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
 }
 
-@media screen and (min-width: 741px) and (max-width: 810px) {
-  .producto{
-    max-width: 265px;
-    margin: 20px;
-  }
+.texto-banner h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  letter-spacing: 1px;
 }
 
-@media screen and (min-width: 690px) and (max-width: 740px) {
-  .producto{
-    max-width: 255px;
-    margin: 10px;
-  }
+.texto-banner p {
+  width: 90%;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-top: -20px;
+  padding-left: 20px;
+  line-height: 1.8;
 }
 
-.producto:hover {
-  background: transparent;
-  transform: scale(1.05); 
+.boton-banner {
+  padding: 15px;
+  color: white;
+  background-color: #0f0f0f;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 10px;
 }
 
+.boton-banner:hover {
+  color: #fffcfc;
+  background-color: #323232;
+}
+
+/* ==========================================================================
+   6. RESPONSIVE BANNER (MEDIA QUERIES)
+   ========================================================================== */
+
+/* LAPTOP */
 @media (max-width: 1024px) {
-  .producto:hover {
-    background: none;
-    transform: none; 
+  .contenedor-banner {
+    height: 510px;
+  }
+  .texto-banner {
+    padding: 10px;
+  }
+
+  .texto-banner h2 {
+    font-size: 40px;
+  }
+
+  .texto-banner p {
+    font-size: 14px;
   }
 }
 
-.productos{
+/* TABLET */
+@media (max-width: 768px) {
+  .contenedor-banner {
+    height: 400px;
+  }
+
+  .texto-banner h2 {
+    font-size: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    margin-top: 5px;
+  }
+  .texto-banner p {
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+  }
+  .texto-banner {
+    padding: 10px;
+    width: 55%;
+    top: 60%;
+    left: 2%;
+  }
+  .boton-banner {
+    padding: 12px;
+    margin-top: 1px;
+    margin-bottom: 10px;
+    margin-left: 12px;
+    border-radius: 7px;
+  }
+}
+
+/* CELULAR */
+@media (max-width: 480px) {
+  .contenedor-banner {
+    height: 300px;
+  }
+
+  .texto-banner h2 {
+    font-size: 20px;
+  }
+  .texto-banner p {
+    font-size: 10px;
+    width: 100%;
+    padding: 10px;
+  }
+  .texto-banner {
+    padding: 5px;
+    width: 60%;
+    top: 60%;
+    left: 2%;
+  }
+  .boton-banner {
+    padding: 9px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    margin-left: 8px;
+    border-radius: 5px;
+  }
+}
+
+/* ==========================================================================
+   7. SECCIÓN PRODUCTOS Y CARDS
+   ========================================================================== */
+
+.productos-ropa {
+  text-align: center;
+  width: 100%;
+
+}
+
+.productos {
   display: flex;
   gap: 10px;
   flex-flow: row wrap;
@@ -164,44 +297,313 @@ a:hover{
   text-align: center;
 }
 
-/* IMAGEN */
+.producto {
+  max-width: 300px;
+  border-radius: 20px;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 
-.prenda1{
+.producto:hover {
+  background: transparent;
+  transform: scale(1.05);
+}
+
+/* IMAGEN DEL CARD */
+.prenda1 {
   min-width: 170px;
   height: 200px;
   object-fit: cover;
-  
- border-radius: 5px;
-
-  
+  border-radius: 5px;
 }
 
-/* TEXTO */
+/* TEXTOS DEL CARD */
+.prendas {
+  margin-bottom: 3px;
+}
 
-.descripcion{
+.descripcion {
   font-size: 10px;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   text-align: center;
   font-weight: bold;
 }
 
-
-.detalles{
+.detalles {
   margin-left: 10px;
   margin-right: 10px;
 }
 
-.prendas{
-  margin-bottom: 3px;
+/* BOTONES DE ACCIÓN */
+.agregar-a-carrito {
+  background-color: black;
+  min-height: 30px;
+  width: 200px;
+  font-size: 10px;
+  border: none;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
 }
 
-
-/* CONTENEDOR GENERAL */
-.row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.agregar-a-carrito:hover,
+.ver__mas:hover {
+  background-color: #323232;
+  transition: 0.3s ease;
 }
+
+.prendas__ocultas {
+  display: none;
+}
+
+.ver__mas {
+  width: 100px;
+  height: 40px;
+  background-color: black;
+  color: aliceblue;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE PRODUCTOS (MEDIA QUERIES)
+   ========================================================================== */
+
+@media (min-width: 741px) and (max-width: 810px) {
+  .producto {
+    max-width: 265px;
+    margin: 20px;
+  }
+}
+
+@media (min-width: 690px) and (max-width: 740px) {
+  .producto {
+    max-width: 255px;
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* IMAGEN DEL CARD */
+  .prenda1 {
+    min-width: 100px;
+    height: 100px;
+  }
+  .productos {
+    display: flex;
+    gap: 5vw;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0;
+    text-align: center;
+  }
+  .producto {
+    min-width: 100px;
+    height: auto;
+    margin: 1px;
+    padding: 10px;
+    background-color: white;
+    font-size: 10px;
+  
+  }
+  .producto:hover {
+    background: none;
+    transform: none;
+  }
+  /* BOTONES DE ACCIÓN */
+  .agregar-a-carrito {
+    background-color: black;
+    height: 30px;
+    width: 140px;
+    font-size: 10px;
+  }
+  .titulo-galeria {
+    font-size: 32px;
+  }
+
+    .ver__mas {
+    width: 110px;
+    height: 40px;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 368px) {
+  .prenda1 {
+    min-width: 100px;
+    height: 100px;
+    min-width: 0;
+
+  }
+  .productos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin: 0;
+  }
+  .producto {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: calc(50% - 5px);
+    min-width: 0;
+    max-width: none;
+    height: auto;
+    padding: 8px;
+    
+  
+  }
+  .producto:hover {
+    background: white;
+    transform: none;
+  }
+  /* BOTONES DE ACCIÓN */
+  .agregar-a-carrito {
+    background-color: black;
+    height: 30px;
+    width: 120px;
+    font-size: 10px;
+  }
+  .titulo-galeria {
+    font-size: 15px;
+  }
+  /* TEXTOS DEL CARD */
+  .prendas {
+    margin-bottom: initial;
+  }
+
+  .descripcion {
+    font-size: 9px;
+  }
+
+  .detalles {
+    margin-left: 4px;
+    margin-right: 4px;
+  }
+
+  /* BOTONES DE ACCIÓN */
+  .agregar-a-carrito {
+    background-color: black;
+    min-height: 30px;
+    width: 120px;
+    font-size: 9px;
+  }
+
+  .ver__mas {
+    width: 110px;
+    height: 40px;
+    font-size: 13px;
+    border-radius: 5px;
+    margin-top: 40px;
+  }
+}
+/* ==========================================================================
+   9. COLORES DE LOS BOTONES DE LAS PRENDAS
+   ========================================================================== */
+
+.colores {
+  width: 30px;
+  height: 20px;
+  border: solid black 1px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.color-camel {
+  background-color: #b68d68;
+}
+
+.color-rojo {
+  background-color: red;
+}
+
+.color-verde {
+  background-color: rgb(27, 181, 19);
+}
+
+.color-negro {
+  background-color: black;
+}
+
+.color-black {
+  background-color: black;
+}
+
+.color-lila {
+  background-color: #c38eb4;
+}
+
+.negro {
+  background-color: black;
+}
+
+.color-beige {
+  background-color: rgb(245, 245, 220);
+}
+
+.color-blanco {
+  background-color: aliceblue;
+}
+
+.color-morado {
+  background-color: blueviolet;
+}
+
+.color-azul {
+  background-color: rgb(0, 89, 254);
+}
+
+.color-gris {
+  background-color: gray;
+}
+
+.color-rosado {
+  background-color: lightpink;
+}
+
+.color-azulgris {
+  background-color: darkcyan;
+}
+
+.color-amarillo {
+  background-color: yellow;
+}
+
+.color-azulclaro {
+  background-color: rgb(0, 204, 255);
+}
+
+.color-red {
+  background-color: red;
+}
+
+.color-pink {
+  background-color: pink;
+}
+
+.color-azulGris {
+  background-color: #4c949a65;
+}
+
+.color-cafe {
+  background-color: #a18161;
+}
+
+.color-grisoscuro {
+  background-color: #1b1818;
+}
+
+/* ==========================================================================
+   10. CARRITO DE COMPRAS
+   ========================================================================== */
 
 /* CARRITO ICONO */
 .img-carrito {
@@ -226,16 +628,13 @@ a:hover{
   padding: 15px;
   min-width: 300px;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   z-index: 10;
 }
-
 
 .carrito.activo {
   display: block;
 }
-
-
 
 /* TABLA */
 .lista-carrito {
@@ -256,271 +655,197 @@ a:hover{
   width: 50px;
 }
 
-/* BOTÓN */
+/* BOTÓN VACIAR / ELIMINAR */
 #vaciar-carrito {
   background: black;
   color: white;
   border-radius: 5px;
   height: 40px;
- 
 }
-.contenedor-boton{
-  display: flex;
-}
-/* HOVER BOTÓN */
+
 #vaciar-carrito:hover {
   background: red;
   border-style: none;
 }
-.total-valor{
- margin-left: 70px;
-}
-@media (min-width: 310px) and (max-width: 425px) {
-.carrito {
-  display: none;
-  position: absolute;
-  left: 40%;
-  top: 40px;
-  transform: translateX(-50%);
-  background: white;
-  padding: 15px;
-  min-width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  z-index: 10;
-}
+
+.eliminar:hover {
+  background-color: red;
+  color: white;
+  border-style: none;
 }
 
-
-/*  FOOTER  */
-
-
-.footer {
-  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
-  color: #fff;
- 
-  font-family: Arial, sans-serif;
-}
-
-/* controla el padding interno de los elementos del footer */
-.margenInterno{
-
-  padding: 50px 20px 20px;
-}
-
-/* CONTENEDOR  */
-.footer-contenedor {
-  justify-content: space-between;
-  gap: 30px;
-  max-width: 900px;
-  margin: auto;
-  flex-wrap: wrap;
-}
-
-/* controlan los estados de una parte del footer */
-.footer-contenedor {
-  display: none;
-}
-
-.footer-contenedor.mostrar {
+.contenedor-boton {
   display: flex;
 }
-/* controlan los estados de una parte del footer */
-/* COLUMNAS */
-.footer-box {
-  flex: 1;
-  min-width: 200px; /* evita que se comprima demasiado */
+
+.total-valor {
+  margin-left: 70px;
 }
 
-/* Títulos */
-.footer-box h2,
-.footer-box h3 {
-  margin-bottom: 15px;
-}
-
-/* Texto */
-.footer-box p {
-  color: #bbb;
-  font-size: 14px;
-  line-height: 1.6;
-}
-
-/* Links */
-.footer-box a {
-  display: block;
-  color: #bbb;
-  text-decoration: none;
-  margin-bottom: 8px;
-  font-size: 14px;
-}
-
-.footer-box a:hover {
-  color: #fff;
-}
-
-/* PARTE INFERIOR */
-.footer-copyright {
-  text-align: center;
-  margin-top: 40px;
-  border-top: 1px solid #333;
-  padding-top: 15px;
-  font-size: 13px;
-  color: #777;
-  padding: 20px;
-  width: 100%;
-}
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .footer-contenedor{
-    justify-content: center;
+/* RESPONSIVE CARRITO */
+@media (min-width: 310px) and (max-width: 425px) {
+  .carrito {
+    display: none;
+    position: absolute;
+    left: 40%;
+    top: 40px;
+    transform: translateX(-50%);
+    background: white;
+    padding: 15px;
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    z-index: 10;
   }
 }
 
-@media (max-width: 500px) {
-  .footer-contenedor{
+/* ==========================================================================
+   11. SECCIÓN ARTÍCULO 
+   ========================================================================== */
+
+/* contenedor general */
+.contenedor-articulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin: 0 auto;
+  margin-top: 180px;
+  margin-bottom: 180px;
+  padding: 20px;
+  width: 80%;
+}
+
+/* contenedor texto */
+.contenedor-texto {
+  max-width: 550px;
+}
+
+/* texto */
+.texto-articulo {
+  margin: 10px;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  line-height: 1.8;
+}
+
+/* título */
+.titulos {
+  text-align: center;
+  font-size: 28px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* subtítulo */
+.parrafo {
+  font-size: 20px;
+  margin-top: -8px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bold;
+}
+
+/* imagen */
+.imgnueva-contenedor {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+}
+
+.imgnueva {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* RESPONSIVE ARTÍCULO */
+@media (max-width: 1024px) {
+  .contenedor-articulo {
+    width: 90%;
+    gap: 30px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+
+  .contenedor-texto {
+    max-width: 450px;
+  }
+
+  .titulos {
+    font-size: 24px;
+  }
+
+  .texto-articulo {
+    font-size: 14px;
+  }
+
+  .imgnueva {
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-articulo {
     flex-direction: column;
+    width: 95%;
+    gap: 30px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     text-align: center;
   }
+
+  .contenedor-texto {
+    max-width: 100%;
+  }
+
+  .titulos {
+    font-size: 22px;
+  }
+
+  .parrafo {
+    font-size: 18px;
+  }
+
+  .texto-articulo {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  .imgnueva {
+    max-width: 90%;
+  }
 }
 
-/* COLORES DE LOS BOTONES DE LAS PRENDAS */
-.colores{
- 
-  width: 30px;
-  height: 20px;
-  border: solid black 1px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.color-camel{
-  background-color:#B68D68 ;
-}
-.color-rojo{
-  background-color: red;
-}
-.color-verde{
-  background-color: rgb(27, 181, 19);
-}
-.color-negro{
-  background-color: black;
-}
-.color-black{
-  background-color: black;
-}
-.color-lila{
-  background-color: #C38EB4;
-}
-.negro{
-  background-color: black;
-}
-.color-beige{
-  background-color: rgb(245, 245, 220);
+/* ==========================================================================
+   12. SECCIÓN GALERÍA DE IMÁGENES (GRID)
+   ========================================================================== */
+
+.contenedor-galeria {
+  margin: 0 auto;
+  margin-top: 120px;
+  width: 85%;
+  min-height: 300px;
 }
 
-.color-blanco{
-  background-color: aliceblue;
-}
-
-.color-morado{
-  background-color: blueviolet;
-}
-.color-azul{
-  background-color: rgb(0, 89, 254);
-}
-.color-gris{
-  background-color: gray;
-}
-.color-rosado{
-  background-color: lightpink;
-}
-.color-azulgris{
-background-color: darkcyan;
-}
-
-.color-amarillo{
-  background-color: yellow;
-}
-
-.color-azulclaro{
-  background-color:rgb(0, 204, 255) ;
-}
-.color-red{
-  background-color: red;
-}
-.color-pink{
-  background-color: pink;
-}
-.color-azulGris{
-  background-color: #4c949a65;
-}
-.color-cafe{
-  background-color: #a18161 ;
-}
-.color-grisoscuro{
-  background-color: #1b1818;
-}
-.agregar-a-carrito{
-  background-color: black;
-  min-height: 30px;
-  width: 200px;
-  font-size: 10px;
-  border: none;
-  border-radius: 5px;
-  color: rgb(255, 255, 255);
-  cursor: pointer;
-}
-
-.agregar-a-carrito:hover, .ver__mas:hover {
-  background-color: #323232;
-  transition: 0.3s ease;
-}
-
-
-.prendas__ocultas{
-  display: none;
-}
-
-.ver__mas{
-  width: 100px;
-  height: 40px;
-  background-color: black;
-  color: aliceblue;
-  border-radius: 5px;
-  cursor: pointer;
-  
-}
-
-.productos-ropa{
-  text-align: center;
-  
-}
-
-
-
-.contenedor-galeria{
- margin: 0 auto;
- margin-top: 120px;
- width: 85%;
- min-height: 300px;
- 
-}
-
-.texto-galeria{
+.texto-galeria {
   text-align: center;
   text-transform: uppercase;
+  font-weight: 800;
+  font-size: 25px;
 }
 
-
-
+.subtitulo-galeria {
+  font-weight: lighter;
+  font-size: 20px;
+  font-style: italic;
+}
 
 .imagenes-galeria {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* ahora sí 3 columnas */
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(4, auto);
   gap: 10px;
-  
-  
 }
 
 .img-galeria {
@@ -553,183 +878,87 @@ background-color: darkcyan;
 }
 
 .img5 {
-  border-radius:  0 10px 10px 0 ;
+  border-radius: 0 10px 10px 0;
   grid-column: 3 / 4;
   grid-row: 1 / 4;
 }
 
-.subtitulo-galeria{
- font-weight: lighter;
- font-size:20px ;
- font-style: italic;
+/* ==========================================================================
+   13. FOOTER (PIE DE PÁGINA)
+   ========================================================================== */
+
+.footer {
+  background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+  color: #fff;
+  font-family: Arial, sans-serif;
 }
 
-.texto-galeria{
- font-weight: 800;
- font-size: 25px;
+.margenInterno {
+  padding: 50px 20px 20px;
 }
 
-/*cambiar nombres de clases luego*/
+.footer-contenedor {
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+  flex-wrap: wrap;
+  display: none;
+}
 
-/* cotenedor general de todo el apartado*/
-.contenedor-articulo{
+.footer-contenedor.mostrar {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  margin: 0 auto;
-  margin-top: 300px;
-  margin-bottom: 300px;
+}
+
+.footer-box {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-box h2,
+.footer-box h3 {
+  margin-bottom: 15px;
+}
+
+.footer-box p {
+  color: #bbb;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-box a {
+  display: block;
+  color: #bbb;
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-box a:hover {
+  color: #fff;
+}
+
+.footer-copyright {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 15px;
+  font-size: 13px;
+  color: #777;
   padding: 20px;
-  
-  width: 80%;
-  height: auto; 
-}
-
-/* contenedor que da el tamaño seleccionado al texto del articulo*/
-.contenedor-texto{
- 
-  max-width: 600px;
-}
-
-/* TEXTO DEL ARTICULO */
-.texto-articulo{
-  max-width: 100%;
-  margin: 10px;
-  font-size: 15px;
-  font-family: 'Poppins', sans-serif;
-  text-align: center;
-  font-weight: normal;
- 
-  
-}
-
-/* titulo del articulo*/
-.titulos{
-  text-align: center;
-  font-size: 30px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 20px;
-}
-
-
-/* subtitulo del articulo */
-.parrafo{
-  font-size: 20px;
-  margin-top: -8px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: bold;
-}
-
-/* contenedor de la imagen del articulo */
-.imgnueva-contenedor{
-
-  display: flex;
-  justify-content: center;
-}
-
-.imgnueva{
   width: 100%;
-  max-width: 500px; 
-  height: auto;
-  
 }
 
-/*responsividad de movil del articulo*/
-@media (max-width: 768px){
-  .contenedor-articulo{
+/* RESPONSIVE FOOTER */
+@media (max-width: 900px) {
+  .footer-contenedor {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-contenedor {
     flex-direction: column;
     text-align: center;
-    margin-top: 110px;
-    margin-bottom: 120px;
   }
-
-  .contenedor-texto{
-    max-width: 100%;
-  }
-
-  .imgnueva{
-    max-width: 400px;
-  }
-  .titulo-galeria{
-    font-size: 30px;
-  }
-  .contenedor-articulo{
-    width: 90%;
-  }
-    .titulos{
-    font-family: 'Arial', sans-serif;
-    font-size: 20px;
-  }
-}
-
-.eliminar:hover{
-  background-color: red;
-  color: white;
-  border-style: none;
-}
-
-.contenedor-banner {
-    width: 100%;
-    height: 600px; 
-    position: relative;
-    overflow: hidden;
-}
-
-.banner {
-    width: 100%;
-    height: 100%;
-   
-    display: block;
-}
-
-.texto-banner {
-    position: absolute;
-    top: 50%;
-    left: 4%;
-    transform: translateY(-60%);
-    z-index: 2;
-    color: black;
-    width: 50%;
-    padding: 20px;
-   
-    max-width: 700px;
-}
-
-.texto-banner h2{
-font-family:"Bebas Neue", sans-serif;
-font-size: 50px;
-font-weight: bold;
-padding-left: 20px;
-padding-right: 20px;
-padding-top: 20px;
-letter-spacing: 1px;
-  
-
-}
-
-.texto-banner p{
-  width: 90%;
-  font-size: 16px;
-  letter-spacing: 1px;
-  margin-top: -20px;
-  padding-left: 20px;
-  line-height: 1.8;
-
-}
-
-.boton-banner{
-  padding: 15px;
-  color: white;
-  background-color: #0f0f0f;
-  margin-top: 20px;
-  margin-left: 20px;
-  border-radius: 10px;
-}
-
-
-.boton-banner:hover{
-color: #fffcfc;
-background-color: #323232;
-
 }
