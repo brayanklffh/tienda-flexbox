@@ -382,7 +382,7 @@ a:hover {
    RESPONSIVE PRODUCTOS
    ========================================================================== */
 
-@media (max-width: 1024px) {
+@media (max-width: 1029px) {
 
   .prenda1 {
     min-width: 140px;
@@ -776,12 +776,12 @@ a:hover {
 .imgnueva {
   width: 100%;
   max-width: 450px;
+ 
   height: auto;
   object-fit: cover;
 }
-
 /* RESPONSIVE ARTÍCULO */
-@media (max-width: 1024px) {
+@media (max-width: 1358px) {
   .contenedor-articulo {
     width: 90%;
     gap: 30px;
@@ -791,6 +791,7 @@ a:hover {
 
   .contenedor-texto {
     max-width: 450px;
+    min-width: 300px;
   }
 
   .titulos {
@@ -798,12 +799,45 @@ a:hover {
   }
 
   .texto-articulo {
-    font-size: 14px;
+    font-size: 13.6px;
+   
   }
 
   .imgnueva {
-    max-width: 350px;
+    max-width: 450px;
+    
   }
+}
+/* RESPONSIVE ARTÍCULO */
+@media (max-width: 1029px) {
+  .contenedor-articulo {
+    width: 90%;
+
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+
+  .contenedor-texto {
+    max-width: 400px;
+     min-width: 350px;
+     border: 1px solid beige;
+  }
+
+  .titulos {
+    font-size: 24px;
+  }
+
+  .texto-articulo {
+    font-size: 13.6px;
+   
+  }
+
+  .imgnueva {
+   max-width: 450px;
+    min-height: auto;
+    margin-top: 5px;
+  }
+
 }
 
 @media (max-width: 768px) {
@@ -818,6 +852,7 @@ a:hover {
 
   .contenedor-texto {
     max-width: 100%;
+     min-width: 300px;
   }
 
   .titulos {
@@ -991,10 +1026,12 @@ a:hover {
 
 }
 
-@media (min-width: 1025px) and (max-width: 1032px) {
 
-  .cuartoproducto {
-    display: block;
-  }
+
+@media (min-width:865px) and (max-width:1366px){
+
+   .oculta{
+      display:none !important;
+   }
 
 }
