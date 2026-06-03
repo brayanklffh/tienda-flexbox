@@ -296,8 +296,9 @@ a:hover {
 }
 
 .producto {
-  max-width: 300px;
+  width: 300px;
   border-radius: 20px;
+  min-height: 183px;
   margin: 20px;
   padding: 20px;
   background-color: white;
@@ -322,7 +323,10 @@ a:hover {
 
 /* TEXTOS DEL CARD */
 .prendas {
-  margin-bottom: 3px;
+  margin-left: 5px;
+  margin-right:5px ;
+  height: 45px;
+  max-width: 100%;
 }
 
 .descripcion {
@@ -377,13 +381,20 @@ a:hover {
     transform: none;
   }
 }
+/*cuadrar cards*/
+
+
+@media(max-width: 404px){
+  .prendas {
+    height: 35px;
+  }
+}
 
 /* ==========================================================================
    RESPONSIVE PRODUCTOS
    ========================================================================== */
 
 @media (max-width: 1029px) {
-
   .prenda1 {
     min-width: 140px;
     height: 160px;
@@ -417,8 +428,8 @@ a:hover {
   }
 }
 
-@media (max-width: 768px) {
 
+@media (max-width: 768px) {
   .prenda1 {
     min-width: 140px;
     max-width: 200px;
@@ -440,6 +451,7 @@ a:hover {
     font-size: 15px;
   }
 
+
   .agregar-a-carrito {
     margin-bottom: 10px;
   }
@@ -454,7 +466,6 @@ a:hover {
 }
 
 @media (max-width: 480px) {
-
   .prenda1 {
     min-width: 110px;
     height: 110px;
@@ -481,7 +492,6 @@ a:hover {
 }
 
 @media (max-width: 368px) {
-
   .prenda1 {
     min-width: 100px;
     height: 100px;
@@ -513,8 +523,8 @@ a:hover {
   }
 
   .detalles {
-    margin-left: 4px;
-    margin-right: 4px;
+    margin-left: 5px;
+    margin-right: 5px;
   }
 
   .agregar-a-carrito {
@@ -620,6 +630,20 @@ a:hover {
 
 .color-grisoscuro {
   background-color: #1b1818;
+}
+.color-azul-oscuro {
+  background-color: #15076f;
+}
+.color-verdeOscuro {
+  background-color: rgb(2, 70, 2);
+}
+
+.color-naranja {
+  background-color: orange;
+}
+
+.color-azulGrisaceo {
+  background-color: rgba(24, 52, 88, 0.93);
 }
 
 /* ==========================================================================
@@ -776,7 +800,7 @@ a:hover {
 .imgnueva {
   width: 100%;
   max-width: 450px;
- 
+
   height: auto;
   object-fit: cover;
 }
@@ -800,12 +824,10 @@ a:hover {
 
   .texto-articulo {
     font-size: 13.6px;
-   
   }
 
   .imgnueva {
     max-width: 450px;
-    
   }
 }
 /* RESPONSIVE ARTÍCULO */
@@ -819,8 +841,8 @@ a:hover {
 
   .contenedor-texto {
     max-width: 400px;
-     min-width: 350px;
-     border: 1px solid beige;
+    min-width: 350px;
+    border: 1px solid beige;
   }
 
   .titulos {
@@ -829,15 +851,13 @@ a:hover {
 
   .texto-articulo {
     font-size: 13.6px;
-   
   }
 
   .imgnueva {
-   max-width: 450px;
+    max-width: 450px;
     min-height: auto;
     margin-top: 5px;
   }
-
 }
 
 @media (max-width: 768px) {
@@ -852,7 +872,7 @@ a:hover {
 
   .contenedor-texto {
     max-width: 100%;
-     min-width: 300px;
+    min-width: 300px;
   }
 
   .titulos {
@@ -1019,19 +1039,61 @@ a:hover {
   }
 }
 @media (min-width: 865px) and (max-width: 1367px) {
-
   .cuartoproducto {
     display: none;
   }
-
 }
 
+@media (min-width: 865px) and (max-width: 1366px) {
+  .oculta {
+    display: none !important;
+  }
+}
 
+/* ==========================================================================
+   13. SEGUNDO APARTADO
+   ========================================================================== */
 
-@media (min-width:865px) and (max-width:1366px){
+.espacioApartado {
+  margin-top: 30px;
+}
 
-   .oculta{
-      display:none !important;
-   }
+.titulo-seccion-caballeros {
+  margin-bottom: 5px;
+  font-size: 40px;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.907);
+}
 
+.parrafo-seccion-caballeros {
+  margin-top: 0;
+  font-family: "Yellowtail", cursive;
+  font-size: 26px;
+  color: rgba(0, 0, 0, 0.349);
+}
+
+.espacio {
+  margin-top: 130px;
+}
+.espacio-secciones {
+  margin-top: 180px;
+}
+/* RESPONSIVE TEXTO*/
+@media (max-width: 480px) {
+  .titulo-seccion-caballeros {
+    font-size: 30px;
+  }
+  .espacio {
+    margin-top: 60px;
+  }
+  .espacio-secciones {
+    margin-top: 90px;
+  }
+  .parrafo-seccion-caballeros {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
 }
