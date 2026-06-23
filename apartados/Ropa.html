@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../estilos.css" />
-
+ <link rel="icon" type="image/png" href="../imagenes/faviconNRfashion.png">
     <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -30,7 +30,7 @@
       name="description"
       content="Explora nuestra colección de ropa, accesorios y calzado para hombre y mujer. Moda moderna, calidad premium y estilo para cada ocasión."
     />
-    <title>practica 1</title>
+    <title>Nr Fashion</title>
   </head>
 
   <body>
@@ -42,11 +42,10 @@
 
         <ul id="elementos">
           <li class="nav__item"><a href="../index.html">Inicio</a></li>
-          <li class="nav__item">
-            <a href="apartados/Accesorios.html">Accesorios</a>
+          <li class="nav__item"><a href="Accesorios.html">Accesorios</a>
           </li>
           <li class="nav__item">
-            <a href="apartados/Zapatos.html">Zapatos</a>
+            <a href="Zapatos.html">Zapatos</a>
           </li>
         </ul>
 
@@ -108,10 +107,15 @@
         </div>
       </div>
     </section>
-
+    <nav class="menu-categorias">
+      <a href="#hombre-chaquetas" class="prendas-hombre">Chaquetas Hombre</a>
+      <a href="#hombre-pantalones" class="prendas-hombre">Pantalones Hombre</a>
+      <a href="#damas-chaquetas" class="prendas-dama">Chaquetas Mujer</a>
+      <a href="#damas-pantalones" class="prendas-dama">Pantalones Mujer</a>
+    </nav>
     <section class="catalogo-general">
       <div class="productos-ropa espacio">
-        <div contenedor-seccion>
+        <div contenedor-seccion id="hombre-chaquetas">
           <h2 class="titulo-seccion">Ropa de caballero</h2>
           <p class="parrafo-seccion">chaquetas y abrigos</p>
         </div>
@@ -334,7 +338,7 @@
           <!-- SECCION PANTALONES PARA HOMBRE -->
 
           <div class="productos-ropa espacio-secciones">
-            <h2 class="titulo-seccion">Ropa de caballero</h2>
+            <h2 class="titulo-seccion" id="hombre-pantalones">Ropa de caballero</h2>
             <p class="parrafo-seccion">pantalones</p>
 
             <div class="productos espacioApartado">
@@ -556,7 +560,7 @@
           <!-- SECCION ABRIGOS Y CHAQUETAS PARA DAMA-->
 
           <div class="productos-ropa espacio-secciones">
-            <h2 class="titulo-seccion">Ropa para dama</h2>
+            <h2 class="titulo-seccion" id="damas-chaquetas">Ropa para dama</h2>
             <p class="parrafo-seccion parrafo-damas">chaquetas y abrigos</p>
 
             <div class="productos espacioApartado">
@@ -621,7 +625,7 @@
 
               <div class="producto" data-precio="75000" data-id="3">
                 <img class="prenda1" src="../imagenes/prenda27.png" alt="" />
-                <h3 class="prendas"> Chaqueta con capucha</h3>
+                <h3 class="prendas">Chaqueta con capucha</h3>
                 <p class="descripcion detalles">
                   Tallas disponibles:<br />
                   S, M, L
@@ -672,7 +676,7 @@
 
               <div class="producto" data-precio="120000" data-id="5">
                 <img class="prenda1" src="../imagenes/prenda29.png" alt="" />
-                <h3 class="prendas"> Chaqueta informal gamusa</h3>
+                <h3 class="prendas">Chaqueta informal gamusa</h3>
 
                 <p class="descripcion detalles">
                   Tallas disponibles:<br />
@@ -784,11 +788,10 @@
             </div>
           </div>
 
-          
           <!-- SECCION PANTALONES PARA DAMA-->
 
           <div class="productos-ropa espacio-secciones">
-            <h2 class="titulo-seccion">Ropa para dama</h2>
+            <h2 class="titulo-seccion" id="damas-pantalones">Ropa para dama</h2>
             <p class="parrafo-seccion parrafo-damas">pantalones</p>
 
             <div class="productos espacioApartado">
@@ -820,12 +823,7 @@
               </div>
 
               <div class="producto" data-precio="100000" data-id="2">
-                <img
-                  class="prenda1"
-                  src="../imagenes/prenda34.png"
-                  alt=""
-                 
-                />
+                <img class="prenda1" src="../imagenes/prenda34.png" alt="" />
                 <h3 class="prendas">Pantalones rectos sueltos</h3>
                 <p class="descripcion detalles">
                   Tallas disponibles:<br />
@@ -853,7 +851,7 @@
 
               <div class="producto" data-precio="75000" data-id="3">
                 <img class="prenda1" src="../imagenes/prenda35.png" alt="" />
-                <h3 class="prendas"> Pantalones piel de imitacion</h3>
+                <h3 class="prendas">Pantalones piel de imitacion</h3>
                 <p class="descripcion detalles">
                   Tallas disponibles:<br />
                   S, M, L
@@ -892,15 +890,14 @@
                   class="colores color-cafe"
                   data-img="../imagenes/prenda36Cafe.png"
                   data-numerodelote="S-102"
-                >
-              </button>
+                ></button>
                 <p class="descripcion">Precio:<br />$130.000</p>
                 <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
               </div>
 
               <div class="producto" data-precio="120000" data-id="5">
                 <img class="prenda1" src="../imagenes/prenda37.png" alt="" />
-                <h3 class="prendas"> Pantalón tipo minimalista</h3>
+                <h3 class="prendas">Pantalón tipo minimalista</h3>
 
                 <p class="descripcion detalles">
                   Tallas disponibles:<br />
@@ -1037,12 +1034,23 @@
         </div>
 
         <!-- Redes -->
-        <div class="footer-box">
-          <h3>Síguenos</h3>
-          <p>@nrfashion</p>
-          <p>Instagram | TikTok | Facebook</p>
-        </div>
+      <div class="social-links footer-box">
+         <h3>Síguenos</h3>
+    <a href="https://www.instagram.com/tu_usuario" target="_blank" rel="noopener noreferrer">
+      <img class="img-footer" src="../imagenes/instagram.png" alt="Instagram">
+    </a>
+    
+    <a href="https://www.tiktok.com/@tu_usuario" target="_blank" rel="noopener noreferrer">
+      <img class="img-footer"   src="../imagenes/tiktok.png" alt="TikTok">
+    </a>
+    
+    <a href="https://www.facebook.com/tu_pagina" target="_blank" rel="noopener noreferrer">
+      <img class="img-footer"   src="../imagenes/facebook.png" alt="Facebook">
+    </a>
+  </div>
+</div>
       </div>
+
 
       <div class="footer-copyright">
         <p>© 2026 NR Fashion - Todos los derechos reservados</p>

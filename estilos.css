@@ -324,7 +324,7 @@ a:hover {
 /* TEXTOS DEL CARD */
 .prendas {
   margin-left: 5px;
-  margin-right:5px ;
+  margin-right: 5px;
   height: 45px;
   max-width: 100%;
 }
@@ -383,8 +383,7 @@ a:hover {
 }
 /*cuadrar cards*/
 
-
-@media(max-width: 404px){
+@media (max-width: 404px) {
   .prendas {
     height: 35px;
   }
@@ -428,7 +427,6 @@ a:hover {
   }
 }
 
-
 @media (max-width: 768px) {
   .prenda1 {
     min-width: 140px;
@@ -451,7 +449,6 @@ a:hover {
     font-size: 15px;
   }
 
-
   .agregar-a-carrito {
     margin-bottom: 10px;
   }
@@ -469,7 +466,7 @@ a:hover {
   .prenda1 {
     min-width: 110px;
     height: 110px;
-    object-fit:contain;
+    object-fit: contain;
   }
 
   .productos {
@@ -619,7 +616,7 @@ a:hover {
 .color-pink {
   background-color: pink;
 }
-.color-Rosado{
+.color-Rosado {
   color: rgb(2, 1, 2);
 }
 .color-azulGris {
@@ -647,7 +644,9 @@ a:hover {
 .color-azulGrisaceo {
   background-color: rgba(24, 52, 88, 0.93);
 }
-
+.color-dorado{
+  background-color: #EFBF04;
+}
 /* ==========================================================================
    10. CARRITO DE COMPRAS
    ========================================================================== */
@@ -1074,7 +1073,7 @@ a:hover {
   font-size: 26px;
   color: rgba(0, 0, 0, 0.349);
 }
-.parrafo-damas{
+.parrafo-damas {
   color: #e601ff3b;
 }
 .espacio {
@@ -1099,4 +1098,115 @@ a:hover {
   }
 }
 
+.menu-categorias {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 140px 0;
+}
 
+.menu-categorias a {
+  background-color: black;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.prendas-dama:hover {
+  color: #e600ff;
+  box-shadow: none;
+}
+.prendas-hombre:hover {
+  color: rgb(0, 149, 255);
+}
+
+.menu-categorias a:hover {
+  transform: translateY(-3px);
+}
+
+@media (max-width: 480px) {
+  .menu-categorias a {
+    padding: 10px 11px;
+    font-size: 13px;
+  }
+
+  .menu-categorias {
+    margin: 80px 0;
+  }
+}
+
+/* Forzamos a que la caja use Flexbox en modo fila con envoltura */
+.social-links.footer-box {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea */
+  justify-content: center; /* Centra todo horizontalmente */
+  gap: 20px; /* Separa los iconos entre sí */
+  text-align: center;
+}
+
+/* Hacemos que el título ocupe el 100% del ancho para obligar a los iconos a bajar */
+.social-links.footer-box h3 {
+  width: 100%;
+  margin-bottom: 0px; /* Ajusta el espacio con los iconos */
+}
+
+/* Escondemos el <br> para que no rompa el diseño del Flexbox */
+.social-links.footer-box br {
+  display: none;
+}
+
+/* Aseguramos que los enlaces se comporten como bloques alineados */
+.social-links.footer-box a {
+  display: inline-block;
+}
+
+/* Control del tamaño de las imágenes */
+.img-footer {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+ 
+
+
+/*CODIGO APARTADO ACCESORIOS*/
+
+/*segundo banner apartado accesorios*/
+
+.contenedor-banner2 {
+  width: 78%;
+  height: 600px;
+  position: relative;
+  margin: 0 auto;
+  object-fit: cover;
+  background-color: #121212;
+  border-radius: 10px;
+}
+
+.banner2 {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 10px;
+  margin-top: 50px;
+  object-fit: fill;
+}
+
+@media (max-width: 500px) {
+.contenedor-banner2 {
+  height: 350px;
+  width: 90%;
+}
+}
+
+@media (max-width: 405px) {
+.contenedor-banner2 {
+  width: 90%;
+  height: 300px;
+
+}
+}

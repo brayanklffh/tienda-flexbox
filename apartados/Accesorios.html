@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../estilos.css" />
+    <link rel="icon" type="image/png" href="../imagenes/faviconNRfashion.png" />
 
-    <!-- FUENTES -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,45 +17,63 @@
       rel="stylesheet"
     />
 
-    <title>practica 1</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta
+      name="description"
+      content="Explora nuestra colección de ropa, accesorios y calzado para hombre y mujer. Moda moderna, calidad premium y estilo para cada ocasión."
+    />
+
+    <title>Nr Fashion</title>
   </head>
 
   <body>
     <header>
       <nav class="navegacion">
         <div class="imagen__nav">
-          <img class="logo" src="logo.png" alt="" id="logo" />
+          <img class="logo" src="../imagenes/logo.png" alt="" />
         </div>
 
         <ul id="elementos">
-          <li class="nav__item"><a href="../index.html">inicio</a></li>
-          <li class="nav__item"><a href="Ropa.html">Ropa</a></li>
+          <li class="nav__item"><a href="../index.html">Inicio</a></li>
+          <li class="nav__item"><a href="Accesorios.html">Accesorios</a></li>
           <li class="nav__item"><a href="Zapatos.html">Zapatos</a></li>
         </ul>
 
         <div>
-          <div class>
+          <div>
             <div>
               <ul>
                 <li class="submenu">
-                  <img src="../cart.png" id="img-carrito" />
-                  <div id="carrito">
-                    <table id="lista-carrito" class="u-full-width">
+                  <img src="../imagenes/cart.png" class="img-carrito" />
+                  <div class="carrito">
+                    <table class="lista-carrito">
                       <thead>
                         <tr>
                           <th>Imagen</th>
                           <th>Nombre</th>
                           <th>Precio</th>
-                          <th>Cantidad</th>
+                          <th class="Cantidad">Cantidad</th>
                           <th></th>
                         </tr>
                       </thead>
-                      <tbody></tbody>
+                      <tbody class="añadirProductosCarrito"></tbody>
                     </table>
-
-                    <a href="#" id="vaciar-carrito" class="button u-full-width">
-                      Vaciar Carrito
-                    </a>
+                    <div class="contenedor-boton">
+                      <button id="vaciar-carrito" class="button u-full-width">
+                        Vaciar Carrito
+                      </button>
+                      <p class="total-valor">
+                        Total: $<span id="total-valor">0</span>
+                      </p>
+                    </div>
                   </div>
                 </li>
               </ul>
@@ -65,15 +83,447 @@
       </nav>
     </header>
 
+    <section class="banner-secundario">
+      <div class="contenedor-banner2">
+        <img
+          src="../imagenes/accesoriosimg.jpg"
+          class="banner2"
+          alt="Imagen publicitaria accesorios"
+        />
+      </div>
+    </section>
 
-    <footer>
-      <div class="texto-footer">
-        <p class="derechos">
-          © 2025 Mi Sitio Web - Todos los derechos reservados
-        </p>
+    <section class="catalogo-general">
+      <div class="productos-ropa espacio">
+        <div class="contenedor-seccion">
+          <h2 class="titulo-seccion">Accesorios para caballero</h2>
+          <p class="parrafo-seccion">Relojes y otros accesorios</p>
+        </div>
+
+        <div class="productos espacioApartado">
+          <div class="producto" data-precio="35000" data-id="9">
+            <img class="prenda1" src="../imagenes/cadenas.png" alt="" />
+            <h3 class="prendas">Cadena personalizada</h3>
+            <p class="descripcion detalles">Material:<br />Acero inoxidable</p>
+            <p class="descripcion">Color:</p>
+            <button
+              class="colores color-negro"
+              data-img="../imagenes/cadenas.png"
+              data-numerodelote="I-101"
+            ></button>
+            <p class="descripcion">Precio:<br />$35.000</p>
+            <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+          </div>
+
+          <div class="producto" data-precio="27000" data-id="10">
+            <img
+              class="prenda1"
+              src="../imagenes/brasaleteretro.png"
+              alt=""
+              id="segundaPrenda"
+            />
+            <h3 class="prendas">Brasalete retro para hombre</h3>
+            <p class="descripcion detalles">Material:<br />Acero inoxidable</p>
+            <p class="descripcion">Color:</p>
+            <button
+              class="colores color-amarillo"
+              data-img="../imagenes/brasaleteretro.png"
+              data-numerodelote="J-101"
+            ></button>
+
+            <p class="descripcion">Precio:<br />$27.000</p>
+            <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+          </div>
+
+          <div class="producto" data-precio="50000" data-id="11">
+            <img class="prenda1" src="../imagenes/gafasaccesorio.png" alt="" />
+            <h3 class="prendas">Gafas de moda de alta gama</h3>
+            <p class="descripcion detalles">Material:<br />Titanio</p>
+            <p class="descripcion">Color:</p>
+            <button
+              class="colores color-negro"
+              data-img="../imagenes/gafasaccesorio.png"
+              data-numerodelote="K-101"
+            ></button>
+
+            <p class="descripcion">Precio:<br />$50.000</p>
+            <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+          </div>
+
+          <div class="producto" data-precio="75000" data-id="12">
+            <img class="prenda1" src="../imagenes/gorraaccesorio.png" alt="" />
+            <h3 class="prendas">Gorra de béisbol casual</h3>
+            <p class="descripcion detalles">
+              Material:<br />100% Algodón Premium
+            </p>
+            <p class="descripcion">Color:</p>
+            <button
+              class="colores color-negro"
+              data-img="../imagenes/gorraaccesorio.png"
+              data-numerodelote="L-101"
+            ></button>
+            <button
+              class="colores color-beige"
+              data-img="../imagenes/gorraaccesoriosBeige.png"
+              data-numerodelote="L-101"
+            ></button>
+            <button
+              class="colores color-azul"
+              data-img="../imagenes/gorraaccesoriosAzul.png"
+              data-numerodelote="L-101"
+            ></button>
+            <p class="descripcion">Precio:<br />$75.000</p>
+            <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+          </div>
+
+          <div class="producto" data-precio="30000" data-id="13">
+            <img class="prenda1" src="../imagenes/pulsera.png" alt="" />
+            <h3 class="prendas">Pulsera de cadena con strass</h3>
+            <p class="descripcion detalles">Material:<br />Acero inoxidable</p>
+            <p class="descripcion">Color:</p>
+            <button
+              class="colores color-gris"
+              data-img="../imagenes/pulsera.png"
+              data-numerodelote="M-101"
+            ></button>
+            <button
+              class="colores color-amarillo"
+              data-img="../imagenes/pulseraDorada.png"
+              data-numerodelote="M-101"
+            ></button>
+            <p class="descripcion">Precio:<br />$30.000</p>
+            <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+          </div>
+
+          <div class="producto" data-precio="80000" data-id="14">
+            <img class="prenda1" src="../imagenes/setRelojes.png" alt="" />
+            <h3 class="prendas">Set de 4 relojes de cuarzo de acero</h3>
+            <p class="descripcion detalles">Material:<br />cuarzo de acero</p>
+            <p class="descripcion">Color:</p>
+            <button
+              class="colores color-blanco"
+              data-img="../imagenes/setRelojes.png"
+              data-numerodelote="N-101"
+            ></button>
+
+            <p class="descripcion">Precio:<br />$80.000</p>
+            <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+          </div>
+
+          <div class="producto" data-precio="50000" data-id="15">
+            <img class="prenda1" src="../imagenes/collarElegante.png" alt="" />
+            <h3 class="prendas">Collar con colgante negro pintado</h3>
+            <p class="descripcion detalles">Material:<br />Acero inoxidable</p>
+            <p class="descripcion">Color:</p>
+            <button
+              class="colores color-negro"
+              data-img="../imagenes/collarElegante.png"
+              data-numerodelote="Ñ-101"
+            ></button>
+
+            <p class="descripcion">Precio:<br />$50.000</p>
+            <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+          </div>
+
+          <div class="producto" data-precio="65000" data-id="16">
+            <img class="prenda1" src="../imagenes/setPulseras.png" alt="" />
+            <h3 class="prendas">Set de 4 piezas de pulseras</h3>
+            <p class="descripcion detalles">Material:<br />Acero inoxidable</p>
+            <p class="descripcion">Color:</p>
+            <button
+              class="colores color-gris"
+              data-img="../imagenes/setPulseras.png"
+              data-numerodelote="O-101"
+            ></button>
+
+            <p class="descripcion">Precio:<br />$85.000</p>
+            <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+          </div>
+
+          <div class="producto" data-precio="25000" data-id="16">
+            <img
+              class="prenda1"
+              src="../imagenes/brasaletedeoreja.png"
+              alt=""
+            />
+            <h3 class="prendas">Brasalete de oreja vintage creativo</h3>
+            <p class="descripcion detalles">Material:<br />Acero inoxidable</p>
+            <p class="descripcion">Color:</p>
+            <button
+              class="colores color-gris"
+              data-img="../imagenes/brasaletedeoreja.png"
+              data-numerodelote="O-101"
+            ></button>
+
+            <p class="descripcion">Precio:<br />$25.000</p>
+            <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+          </div>
+
+          <div class="producto" data-precio="85000" data-id="16">
+            <img class="prenda1" src="../imagenes/gafasdesol.png" alt="" />
+            <h3 class="prendas">Gafas de moda con marco cuadrado</h3>
+            <p class="descripcion detalles">Material:<br />Titanio</p>
+            <p class="descripcion">Color:</p>
+            <button
+              class="colores color-negro"
+              data-img="../imagenes/gafasdesol.png"
+              data-numerodelote="O-101"
+            ></button>
+
+            <p class="descripcion">Precio:<br />$85.000</p>
+            <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+          </div>
+
+          <div class="producto" data-precio="45000" data-id="16">
+            <img class="prenda1" src="../imagenes/anillodesello.png" alt="" />
+            <h3 class="prendas">Anillo de sello clásico unisex</h3>
+            <p class="descripcion detalles">Material:<br />Acero inoxidable</p>
+            <p class="descripcion">Color:</p>
+            <button
+              class="colores color-negro"
+              data-img="../imagenes/anillodesello.png"
+              data-numerodelote="O-101"
+            ></button>
+
+            <p class="descripcion">Precio:<br />$45.000</p>
+            <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+          </div>
+
+          <div class="producto" data-precio="69900" data-id="16">
+            <img class="prenda1" src="../imagenes/collarcolgante.png" alt="" />
+            <h3 class="prendas">Collar colgante con remaches</h3>
+            <p class="descripcion detalles">Material:<br />Acero inoxidable</p>
+            <p class="descripcion">Color:</p>
+            <button
+              class="colores color-negro"
+              data-img="../imagenes/collarcolgante.png"
+              data-numerodelote="O-101"
+            ></button>
+
+            <p class="descripcion">Precio:<br />$69.900</p>
+            <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+          </div>
+
+          <!-- Contenido de damas aquí -->
+
+          <div class="contenedor-seccion" id="damas-pantalones">
+            <h2 class="titulo-seccion">Accesorios para dama</h2>
+            <p class="parrafo-seccion parrafo-damas">
+              Aretes y otros accesorios
+            </p>
+          </div>
+
+          <div class="productos espacioApartado">
+            <div class="producto" data-precio="50000" data-id="1">
+              <img
+                class="prenda1"
+                src="../imagenes/setaretesdedama.png"
+                alt=""
+              />
+              <h3 class="prendas">Set de 9 pares de pendientes</h3>
+              <p class="descripcion detalles">Material:<br />Plata</p>
+              <p class="descripcion">Color:</p>
+              <button
+                class="colores color-dorado"
+                data-img="../imagenes/setaretesdedama.png"
+                data-numerodelote="P-101"
+              ></button>
+
+              <p class="descripcion">Precio:<br />$50.000</p>
+              <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+            </div>
+
+            <div class="producto" data-precio="110000" data-id="2">
+              <img
+                class="prenda1"
+                src="../imagenes/collarconcolgante.png"
+                alt=""
+              />
+              <h3 class="prendas">colgante de alas de ángel</h3>
+              <p class="descripcion detalles">
+                Material:<br />Acero inoxidable
+              </p>
+              <p class="descripcion">Color:</p>
+              <button
+                class="colores color-gris"
+                data-img="../imagenes/collarconcolgante.png"
+                data-numerodelote="Q-101"
+              ></button>
+              <p class="descripcion">Precio:<br />$110.000</p>
+              <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+            </div>
+
+            <div class="producto" data-precio="55000" data-id="3">
+              <img
+                class="prenda1"
+                src="../imagenes/brazaletedorado.png"
+                alt=""
+              />
+              <h3 class="prendas">Brazalete dorado asimétrico</h3>
+              <p class="descripcion detalles">
+                Material:<br />Acero inoxidable
+              </p>
+              <p class="descripcion">Color:</p>
+              <button
+                class="colores color-dorado"
+                data-img="../imagenes/brazaletedorado.png"
+                data-numerodelote="R-101"
+              ></button>
+              <p class="descripcion">Precio:<br />$55.000</p>
+              <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+            </div>
+
+            <div class="producto" data-precio="30000" data-id="4">
+              <img
+                class="prenda1"
+                src="../imagenes/collarminimalista.png"
+                alt=""
+              />
+              <h3 class="prendas">Collar minimalista personalizado</h3>
+              <p class="descripcion detalles">
+                Material:<br />Acero inoxidable
+              </p>
+              <p class="descripcion">Color:</p>
+              <button
+                class="colores color-dorado"
+                data-img="../imagenes/collarminimalista.png"
+                data-numerodelote="S-101"
+              ></button>
+              <button
+                class="colores color-gris"
+                data-img="../imagenes/collarminimalistagris.png"
+                data-numerodelote="S-102"
+              ></button>
+
+              <p class="descripcion">Precio:<br />$30.000</p>
+              <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+            </div>
+
+            <div class="producto" data-precio="120000" data-id="5">
+              <img class="prenda1" src="../imagenes/collar2piezas.png" alt="" />
+              <h3 class="prendas">2 piezas Collar con colgante</h3>
+              <p class="descripcion detalles">
+                Material:<br />Acero inoxidable
+              </p>
+              <p class="descripcion">Color:</p>
+              <button
+                class="colores color-cafe"
+                data-img="../imagenes/collar2piezas.png"
+                data-numerodelote="T-101"
+              ></button>
+
+              <p class="descripcion">Precio:<br />$70.000</p>
+              <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+            </div>
+
+            <div class="producto" data-precio="50000" data-id="6">
+              <img class="prenda1" src="../imagenes/gafasdemetal.png" alt="" />
+              <h3 class="prendas">Gafas de marco con decoración</h3>
+              <p class="descripcion detalles">Material:<br />metal</p>
+              <p class="descripcion">Color:</p>
+              <button
+                class="colores color-dorado"
+                data-img="../imagenes/gafasdemetal.png"
+                data-numerodelote="U-101"
+              ></button>
+
+              <p class="descripcion">Precio:<br />$50.000</p>
+              <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+            </div>
+
+            <div class="producto" data-precio="40000" data-id="7">
+              <img class="prenda1" src="../imagenes/anillos.png" alt="" />
+              <h3 class="prendas">anillos de metal con diseño</h3>
+              <p class="descripcion detalles">Material:<br />metal</p>
+              <p class="descripcion">Color:</p>
+              <button
+                class="colores color-gris"
+                data-img="../imagenes/anillos.png"
+                data-numerodelote="V-101"
+              ></button>
+
+              <p class="descripcion">Precio:<br />$40.000</p>
+              <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+            </div>
+
+            <div class="producto" data-precio="65000" data-id="8">
+              <img class="prenda1" src="../imagenes/setcinturones.png" alt="" />
+              <h3 class="prendas">Elegante set de 3 cinturones</h3>
+              <p class="descripcion detalles">Material:<br />Cuero sintetico</p>
+              <p class="descripcion">Color:</p>
+              <button
+                class="colores color-blanco"
+                data-img="../imagenes/setcinturones.png"
+                data-numerodelote="W-101"
+              ></button>
+
+              <p class="descripcion">Precio:<br />$65.000</p>
+              <button class="agregar-a-carrito">AGREGAR AL CARRITO</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-contenedor">
+        <div class="footer-box">
+          <h2>NR Fashion</h2>
+          <p>
+            Moda moderna y accesible para todos. Encuentra estilo, comodidad y
+            calidad en un solo lugar.
+          </p>
+        </div>
+
+        <div class="footer-box">
+          <h3>Ayuda</h3>
+          <a href="#">Preguntas frecuentes</a>
+          <a href="#">Envíos</a>
+          <a href="#">Devoluciones</a>
+          <a href="#">Soporte</a>
+        </div>
+
+        <div class="social-links footer-box">
+          <h3>Síguenos</h3>
+          <a
+            href="https://www.instagram.com/tu_usuario"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="img-footer"
+              src="../imagenes/instagram.png"
+              alt="Instagram"
+            />
+          </a>
+          <a
+            href="https://www.tiktok.com/@tu_usuario"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img class="img-footer" src="../imagenes/tiktok.png" alt="TikTok" />
+          </a>
+          <a
+            href="https://www.facebook.com/tu_pagina"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              class="img-footer"
+              src="../imagenes/facebook.png"
+              alt="Facebook"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-copyright">
+        <p>© 2026 NR Fashion - Todos los derechos reservados</p>
       </div>
     </footer>
 
-    <script src="interacciones.js"></script>
+    <script src="../js/logicaCarrito.js"></script>
+    <script src="../js/Productos.js"></script>
+    <script src="../js/footer.js"></script>
   </body>
 </html>
