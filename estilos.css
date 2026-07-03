@@ -1192,7 +1192,7 @@ a:hover {
 
 .slider-box ul {
   display: flex;
- animation: slide 15s infinite alternate ease-in-out;
+  animation: slide 15s infinite alternate ease-in-out;
   /* CORRECCIÓN: Elimina los espacios por defecto del ul */
   width: 100%;
   padding: 0;
@@ -1215,20 +1215,19 @@ a:hover {
   /* Cambiado a 'cover' para que la imagen no se deforme al estirarse */
   object-fit: fill;
 }
-
 @keyframes slide {
-  /* Imagen 1: Se queda quieta al inicio */
+  /* Imagen 1: Quieta */
   0%   { margin-left: 0; }
-  20%  { margin-left: 0; }
+  31%  { margin-left: 0; }
 
-  /* Transición hacia la Imagen 2 */
+  /* Transición ultra rápida a Imagen 2 (¡Solo toma el 2% del tiempo!) */
   35%  { margin-left: -100%; }
-  /* Imagen 2: Se queda quieta en el medio */
-  65%  { margin-left: -100%; }
+  /* Imagen 2: Quieta */
+  64%  { margin-left: -100%; }
 
-  /* Transición hacia la Imagen 3 */
-  80%  { margin-left: -200%; }
-  /* Imagen 3: Se queda quieta al final del trayecto */
+  /* Transición ultra rápida a Imagen 3 (Otro 2%) */
+  70%  { margin-left: -200%; }
+  /* Imagen 3: Quieta */
   100% { margin-left: -200%; }
 }
 
@@ -1245,28 +1244,4 @@ a:hover {
     width: 90%;
     height: 300px;
   }
-}
-
-/*========================================SECCION SLIDER=====================================================*/
-
-.carousel-item img {
-  height: 650px;
-  width: 100%;
-  object-fit: fill;
-}
-
-.carousel-caption {
-  background: rgba(0, 0, 0, 0.45);
-  border-radius: 10px;
-  padding: 20px;
-  object-fit: cover;
-}
-
-.carousel-caption h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.carousel-caption p {
-  font-size: 1.2rem;
 }
