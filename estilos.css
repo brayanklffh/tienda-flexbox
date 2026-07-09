@@ -1193,7 +1193,7 @@ a:hover {
 .slider-box ul {
   display: flex;
   animation: slide 15s infinite alternate ease-in-out;
-  /* CORRECCIÓN: Elimina los espacios por defecto del ul */
+  /* Elimina los espacios por defecto del ul */
   width: 100%;
   padding: 0;
   margin: 0;
@@ -1201,7 +1201,7 @@ a:hover {
 
 .slider-box li {
   list-style: none;
-  /* CORRECCIÓN: Obliga a cada slide a ocupar todo el ancho del contenedor sin encogerse */
+  /*  Obliga a cada slide a ocupar todo el ancho del contenedor sin encogerse */
   width: 100%;
   flex-shrink: 0;
 }
