@@ -224,6 +224,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 //======================================================= MANDAR COMPRA A WHATZAP ========================================================
+
 // Seleccionamos el botón de la compra
 const botonComprar = document.querySelector("#enviar-whatsapp");
 
@@ -240,11 +241,11 @@ botonComprar.addEventListener("click", (e) => {
   const telefono = "573142861157"; // <-- Reemplaza con tu número real de celular
 
   // 3. Empezamos a armar el mensaje de texto plano
-  let mensaje = "¡Hola! Me interesa comprar los siguientes productos de mi carrito:\n\n";
+  let mensaje ="¡Hola! Me interesa comprar los siguientes productos de mi carrito:\n\n";
 
   // 4. Recorremos el carrito para añadir cada prenda al mensaje texto
   carrito.forEach((producto) => {
-    mensaje += `📌 *${producto.nombre}*\n`;
+    mensaje += `❖ *${producto.nombre}*\n`;
     mensaje += `   • Cantidad: ${producto.cantidad}\n`;
     mensaje += `   • Lote/Color: ${producto.lote}\n`;
     mensaje += `   • Subtotal: $${Number(producto.precio) * producto.cantidad}\n`;
@@ -253,7 +254,7 @@ botonComprar.addEventListener("click", (e) => {
 
   // 5. Calculamos el total global para cerrar el mensaje
   const totalFinal = carrito.reduce((total, p) => total + Number(p.precio) * p.cantidad, 0);
-  mensaje += `💰 *TOTAL A PAGAR: $${totalFinal}*`;
+  mensaje += `*TOTAL A PAGAR: $${totalFinal}*`;
 
   // 6. El truco final: encodeURIComponent convierte los espacios y saltos de línea 
   // en caracteres amigables que el navegador puede leer en una URL
